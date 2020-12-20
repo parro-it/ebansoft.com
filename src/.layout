@@ -1,0 +1,8 @@
+<html>
+<body>
+    <h1>Welcome to ebansoft blog:</h1>
+    
+    {{{content}}}
+
+</body>
+</html>
