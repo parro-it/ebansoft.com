@@ -45,40 +45,7 @@
       <p>Made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
     </section>
   </div>
-   !(function (t) {
-      const e = {
-          copy: (t = '', e = '') =>
-              new Promise((c, o) => {
-                  const n = document.createElement('textarea'),
-                      d = e ? `\n\n${e}` : e;
-                  (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                  try {
-                      const t = document.execCommand('copy');
-                      document.body.removeChild(n), t ? c() : o();
-                  } catch (t) {
-                      document.body.removeChild(n), o();
-                  }
-              }),
-          btnClick(t) {
-              const c = t && t.dataset ? t.dataset : {},
-                  o = c.mdicNotifyId,
-                  n = document.getElementById(o),
-                  d = c.mdicNotifyDelay,
-                  i = c.mdicCopyFailText;
-              e.copy(c.mdicContent, c.mdicAttachContent)
-                  .then(() => {
-                      (n.style.display = 'block'),
-                          setTimeout(() => {
-                              n.style.display = 'none';
-                          }, d);
-                  })
-                  .catch(() => {
-                      alert(i);
-                  });
-          },
-      };
-      e.btnClick(t);
-    })(this);
+   
   </script>
 </body>
 

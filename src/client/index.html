@@ -16,7 +16,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Averia+Serif+Libre&family=Fira+Code&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/markdowit-copy.css">
 
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
@@ -125,42 +124,7 @@
       <p>Made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
     </section>
   </div>
-  <script>
-    !(function (t) {
-      const e = {
-          copy: (t = '', e = '') =>
-              new Promise((c, o) => {
-                  const n = document.createElement('textarea'),
-                      d = e ? `\n\n${e}` : e;
-                  (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                  try {
-                      const t = document.execCommand('copy');
-                      document.body.removeChild(n), t ? c() : o();
-                  } catch (t) {
-                      document.body.removeChild(n), o();
-                  }
-              }),
-          btnClick(t) {
-              const c = t && t.dataset ? t.dataset : {},
-                  o = c.mdicNotifyId,
-                  n = document.getElementById(o),
-                  d = c.mdicNotifyDelay,
-                  i = c.mdicCopyFailText;
-              e.copy(c.mdicContent, c.mdicAttachContent)
-                  .then(() => {
-                      (n.style.display = 'block'),
-                          setTimeout(() => {
-                              n.style.display = 'none';
-                          }, d);
-                  })
-                  .catch(() => {
-                      alert(i);
-                  });
-          },
-      };
-      e.btnClick(t);
-    })(this);
-  </script>
+  
 </body>
 
 </html>

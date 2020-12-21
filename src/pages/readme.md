@@ -8,7 +8,6 @@ This page is just an example of the capacity of orgame app.
 * item 2
 * item 3
 
-
 1) numbered item
 2) numbered item
 3) numbered item
