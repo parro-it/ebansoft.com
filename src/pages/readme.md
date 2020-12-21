@@ -17,6 +17,13 @@ This page is just an example of the capacity of orgame app.
 This is a normal paragraph of text. 
 This is a citation: `HTML` `orgame`
 
+## Task lists
+
+* [ ] - task 1
+* [X] - task 2, done!
+* [ ] - task 3
+* [X] - task 4, done!
+
 ## Headers
 
 ### third
