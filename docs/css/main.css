@@ -18,6 +18,8 @@ h4 {
   line-height: 1.2;
 }
 
+  
+
 a {
   color: #ffeea6;
   text-decoration: none;
@@ -43,6 +45,10 @@ p {
   margin: 2rem 0;
 }
 
+li {
+  font-size: 1.2rem;
+}
+
 img {
   border-style: none;
   display: inline-block;
@@ -50,43 +56,7 @@ img {
   height: auto;
 }
 
-.logo {
-  margin: 1.5rem auto;
-}
 
-@media screen and (max-width: 699.98px) {
-  .logo {
-    max-width: 100px;
-  }
-}
-
-.logo2 {
-  max-width: 50px;
-  margin: 1.5rem 0.5rem;
-  transition: transform 0.15s ease-in-out;
-}
-
-.logo2:hover {
-  transform: scale(1.1);
-}
-
-@media screen and (min-width: 700px) {
-  .logo2 {
-    max-width: 75px;
-    margin: 1rem 0.5rem;
-  }
-}
-
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.logos a {
-  display: inline-block;
-}
 
 header {
   text-align: center;
@@ -96,7 +66,7 @@ h1 {
   font-family: 'Cinzel Decorative', sans-serif;
   font-size: 3rem;
   font-weight: 400;
-  margin-top: -1rem !important;
+  font-size: 6rem;
   margin-bottom: 0;
   color: #ffeea6;
   background: linear-gradient(#ffeea6, #ffd479);
@@ -152,13 +122,6 @@ h3 {
   }
 }
 
-blockquote {
-  font-size: 1.5rem;
-  border-bottom: 1px solid #444;
-  padding: 1rem;
-  margin: 0;
-}
-
 cite {
   display: block;
   font-size: 1.2rem;
@@ -188,6 +151,108 @@ cite {
   width: 20px;
   border-radius: 50%;
   margin: 0 0.5rem 0 0;
+}
+
+h2::before,h3::before,h4::before,h5::before,h6::before {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  content: "";
+}
+
+h2,h3,h4,h5,h6 {
+  display: flex;
+}
+
+
+pre, blockquote, table {
+  border: 1px #2e2e2e solid;
+  border-radius: 8px;
+  padding: 16px;
+  background: black;
+  box-shadow: 10px 10px 26px rgba(0,0,0,0.1);
+  font-size: 1.5em;
+  margin-bottom: 20px !important;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 12px;
+  font-family: 'Fira Code', monospace;
+  min-width: 60%;
+  text-align: left;
+  margin: auto;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr {
+  border-top: 1px solid gray;
+}
+
+thead {
+  border-bottom: 1px solid gray;
+}
+
+table td,
+table th {
+  padding: 6px 10px;
+  
+}
+
+pre code {
+  font-family: 'Fira Code', monospace;
+}
+
+blockquote {
+  padding: 15px;
+  margin: 0px;
+  text-align: left;
+  font-style: italic;
+  padding-bottom: 3em;
+}
+
+blockquote > p {
+  margin: 0px;
+}
+
+
+blockquote::before,
+blockquote::after {
+  content: "𝀒";
+  padding: 0;
+  margin: 0;
+}
+
+blockquote::after {
+  
+  text-align: right;
+  width: 100%;
+  display: block;
+  padding-right: 15px;
+}
+
+h2::before {
+  color: #6ab0f3;
+}
+
+h3::before {
+  color: #92d192;
+}
+
+h4::before {
+  color: #f2777a;
+}
+
+h5::before {
+  color: #fca369;
+}
+
+h6::before {
+  color:#ffd479;
 }
 
 .y {
@@ -256,4 +321,11 @@ cite {
 
 ::selection {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+p > code {
+  background-color: #fca369;
+  padding: 3px 6px;
+  border-radius: 3px;
+  color: #222;
 }

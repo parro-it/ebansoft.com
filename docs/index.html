@@ -6,22 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <title>New Moon Syntax Theme for Web Development</title>
-  <meta name="description" content="The optimized dark theme for web development">
+  <title>Eban Blog</title>
+  <meta name="description" content="Thoughts on Javascript and C development.">
 
   <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
   <link rel="dns-prefetch" href="https://api.github.com/">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400%7CAveria+Serif+Libre&display=swap">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Averia+Serif+Libre&family=Fira+Code&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/markdowit-copy.css">
 
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png">
   <link rel="manifest" href="./manifest.json">
   <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#2d2d2d">
-  <meta name="apple-mobile-web-app-title" content="New Moon Syntax Theme">
-  <meta name="application-name" content="New Moon Syntax Theme">
+  <meta name="apple-mobile-web-app-title" content="Eban Blog">
+  <meta name="application-name" content="Eban Blog">
   <meta name="msapplication-TileColor" content="#2d2d2d">
   <meta name="theme-color" content="#2d2d2d">
 
@@ -31,21 +34,15 @@
 <body>
   <div class="container">
     <header>
-      <img class="logo" src="./logos/new-moon.svg" alt="New Moon Logo" width="150" height="150">
-      <h1>New Moon</h1>
+      <h1>Eban Blog</h1>
       <div class="subtitle">
-        The optimized dark theme for web development
+        Thoughts on Javascript and C development.
       </div>
-      <a class="github-button" href="https://github.com/taniarascia/new-moon" data-icon="octicon-star" data-size="large"
-        data-show-count="true" aria-label="Star taniarascia/new-moon on GitHub">New Moon</a>
-      <a class="github-button" href="https://github.com/taniarascia" data-size="large" data-show-count="true"
-        aria-label="Follow @taniarascia on GitHub">@taniarascia</a>
+      <a class="github-button" href="https://github.com/parro-it/ebansoft.com" data-icon="octicon-watch" data-size="large"
+        data-show-count="true" aria-label="Follow this blog on GitHub">ebansoft.com</a>
+      <a class="github-button" href="https://github.com/parro-it" data-size="large" data-show-count="true"
+        aria-label="Follow @parro-it on GitHub">@parro-it</a>
     </header>
-
-    <section>
-      <img srcset="./samples/react.png, ./samples/react@2x.png 2x" src="./samples/react.png" alt="React Screenshot"
-        width="800" height="634">
-    </section>
 
     <section>
       <h2>
@@ -57,29 +54,6 @@
         browser's <strong>DevTools</strong> (Chrome), and your
         <strong>terminal</strong> (iTerm2, HyperTerm, Blink).
       </p>
-
-      <div class="logos">
-        <a href="https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode" rel="noopener"
-          target="_blank">
-          <img class="logo2" src="./logos/vscode.png" alt="VS Code Logo" width="75" height="75">
-        </a>
-        <a href="https://chrome.google.com/webstore/detail/devtools-theme-new-moon/lndddploiofhfpdcoclegenegblkhlfk?hl=en"
-          rel="noopener" target="_blank">
-          <img class="logo2" src="./logos/chrome.png" alt="Chrome Logo" width="75" height="75">
-        </a>
-        <a href="https://github.com/taniarascia/new-moon/tree/master/iterm2">
-          <img class="logo2" src="./logos/iterm2.png" alt="VS Code Logo" width="75" height="75">
-        </a>
-        <a href="https://github.com/taniarascia/new-moon-brackets">
-          <img class="logo2" src="./logos/brackets.png" alt="VS Code Logo" width="75" height="75">
-        </a>
-        <a href="https://packagecontrol.io/packages/New%20Moon%20Color%20Scheme">
-          <img class="logo2" src="./logos/sublime.png" alt="VS Code Logo" width="75" height="75">
-        </a>
-        <a href="https://atom.io/themes/new-moon-atom-syntax">
-          <img class="logo2" src="./logos/atom.png" alt="VS Code Logo" width="75" height="75">
-        </a>
-      </div>
 
       <h2>
         <span class="circle g2"></span>
@@ -93,7 +67,7 @@
       </p>
       <h3>HTML & CSS work together</h3>
       <p>In HTML, we can see tags are blue, attributes are yellow, and values are green.</p>
-      <img src="./samples/html.png" alt="HTML Screenshot" width="430" height="114">
+        
       <p>
         In CSS, Sass, or LESS, styling tag selectors will be blue, and classes will be yellow.
       </p>
@@ -151,6 +125,42 @@
       <p>Made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
     </section>
   </div>
+  <script>
+    !(function (t) {
+      const e = {
+          copy: (t = '', e = '') =>
+              new Promise((c, o) => {
+                  const n = document.createElement('textarea'),
+                      d = e ? `\n\n${e}` : e;
+                  (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
+                  try {
+                      const t = document.execCommand('copy');
+                      document.body.removeChild(n), t ? c() : o();
+                  } catch (t) {
+                      document.body.removeChild(n), o();
+                  }
+              }),
+          btnClick(t) {
+              const c = t && t.dataset ? t.dataset : {},
+                  o = c.mdicNotifyId,
+                  n = document.getElementById(o),
+                  d = c.mdicNotifyDelay,
+                  i = c.mdicCopyFailText;
+              e.copy(c.mdicContent, c.mdicAttachContent)
+                  .then(() => {
+                      (n.style.display = 'block'),
+                          setTimeout(() => {
+                              n.style.display = 'none';
+                          }, d);
+                  })
+                  .catch(() => {
+                      alert(i);
+                  });
+          },
+      };
+      e.btnClick(t);
+    })(this);
+  </script>
 </body>
 
 </html>
