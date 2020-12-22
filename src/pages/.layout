@@ -1,52 +1,18 @@
-<!doctype html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+{% extends "../layouts/blog.njk" %}
 
-  <title>Eban Blog</title>
-  <meta name="description" content="Thoughts on Javascript and C development.">
-
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
-  <link rel="dns-prefetch" href="https://api.github.com/">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400%7CAveria+Serif+Libre&display=swap">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/newmoon.css">
-  <link rel="stylesheet" href="./css/markdowit-copy.css">
-
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="./manifest.json">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#2d2d2d">
-  <meta name="apple-mobile-web-app-title" content="Eban Blog">
-  <meta name="application-name" content="Eban Blog">
-  <meta name="msapplication-TileColor" content="#2d2d2d">
-  <meta name="theme-color" content="#2d2d2d">
-
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-</head>
-
-<body>
-  <div class="container">
-    <header>
-      <h1>Eban Blog</h1>
-      
-    </header>
-
+{% block content %}
     <section>
-      {{{content}}}
+      {{mdContent| safe}}
     </section>
 
     <section class="credits">
-      <p>Made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
-    </section>
-  </div>
-   
-  </script>
-</body>
+      <ul>
+        <li>
+          New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
+        </li>
 
-</html>
+      </ul>
+    </section>
+{% endblock %}
+    

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>Eban Blog</title>
+  <meta name="description" content="Thoughts on Javascript and C development.">
+
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400%7CAveria+Serif+Libre&display=swap">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/newmoon.css">
+  <link rel="stylesheet" href="./css/markdowit-copy.css">
+
+  <script src="https://livejs.com/live.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+
+<body>
+ciao
+  <div class="container">
+    <header>
+      <h1>Eban Blog</h1>
+      <div class="subtitle">
+        Thoughts on Javascript and C development.
+      </div>
+      <a class="github-button" href="https://github.com/parro-it/ebansoft.com" data-icon="octicon-watch" data-size="large"
+        data-show-count="true" aria-label="Follow this blog on GitHub">ebansoft.com</a>
+      <a class="github-button" href="https://github.com/parro-it" data-size="large" data-show-count="true"
+        aria-label="Follow @parro-it on GitHub">@parro-it</a>
+    </header>
+
+    <section>
+      
+    <section>
+      <h1>Modernize micro functions</h1>
+<figure><img src="head-blog-home.png" alt=""><figcaption>People Cheering</figcaption></figure>
+<p>Something like 23 years ago I was starting to learn
+to use and write components using Visual Basic 6.</p>
+<p>Since them, I was fascinated by the concept of components,
+and so I start to write my collection of libraries.</p>
+<p>Soon, I start to be frustrated by the limitations of
+the tools I was using.</p>
+<p>Maintaining a collection of independent libraries,
+and managing dependencies upgrades and compatibility
+was a nightmare. The situation slightly improve with <a href="http://Dot.NET">Dot.NET</a>,
+but still...</p>
+<p>It was when I discovered Node.js and NPM that I finally find
+I have the right tools to build a really useful collection
+of packages.</p>
+<p>I wrote <a href="https://github.com/parro-it/awesome-micro-npm-packages">awesome-micro-npm-packages</a>,
+a public list where I collect micro-packages built by me or by others
+that I use often.</p>
+<figure><blockquote class="twitter-tweet"><p lang="en" dir="ltr">In principle, I like NPM&#39;s idea of micro-frameworks containing a single class or function, and that should work well with Swift, where …</p>&mdash; Nick Lockwood (@nicklockwood) <a href="https://twitter.com/nicklockwood/status/925738874873184256?ref_src=twsrc%5Etfw">November 1, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<figcaption>A tweet about micro functions </figcaption></figure>
+<h2>The current situation 🏭</h2>
+<p>But in 2020, I want to be able to use es6 modules
+and typescript type descriptions:</p>
+<pre><code class="language-js"><span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;map&quot;</span>;
+
+<span class="hljs-built_in">console</span>.log(map(<span class="hljs-string">&quot;ciao&quot;</span>, toUpper))
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">js</span><div class="u-mdic-copy-notify" id="j-notify-1608672970372-87426">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="import {map} from &quot;map&quot;;
+
+console.log(map(&quot;ciao&quot;, toUpper))
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608672970372-87426" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+    const e = {
+        copy: (t = '', e = '') =>
+            new Promise((c, o) => {
+                const n = document.createElement('textarea'),
+                    d = e ? `\n\n${e}` : e;
+                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
+                try {
+                    const t = document.execCommand('copy');
+                    document.body.removeChild(n), t ? c() : o();
+                } catch (t) {
+                    document.body.removeChild(n), o();
+                }
+            }),
+        btnClick(t) {
+            const c = t && t.dataset ? t.dataset : {},
+                o = c.mdicNotifyId,
+                n = document.getElementById(o),
+                d = c.mdicNotifyDelay,
+                i = c.mdicCopyFailText;
+            e.copy(c.mdicContent, c.mdicAttachContent)
+                .then(() => {
+                    (n.style.display = 'block'),
+                        setTimeout(() => {
+                            n.style.display = 'none';
+                        }, d);
+                })
+                .catch(() => {
+                    alert(i);
+                });
+        },
+    };
+    e.btnClick(t);
+})(this);
+">copy</button></div></pre>
+<p>So I wrote the first module of the collection, and here we are</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>map</td>
+<td>map function</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>filter function</td>
+</tr>
+<tr>
+<td>slice</td>
+<td>map function</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Photo by Elevate on Unsplash</strong></p>
+
+    </section>
+
+    <section class="credits">
+      <ul>
+        <li>
+          New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
+        </li>
+
+      </ul>
+    </section>
+
+    </section>
+
+    <section class="credits">
+      <ul>
+        <li>
+          New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
+        </li>
+      </ul>
+    </section>
+  </div>
+   
+</body>
+
+</html>

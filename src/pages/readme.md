@@ -1,3 +1,7 @@
+{% extends "../layouts/blog.njk" %}
+
+{% block content %}
+
 ## ebansoft.com blog sources.
 
 This page is just an example of the capacity of orgame app.
@@ -62,8 +66,10 @@ This is link without protocol: github.com/parro-it/ebansoft.com.
 > This is another quote
 
 ## Images
-
-[![example image](head-blog-home.png)](head-blog-home.png)
+[![spoiler](https://github.com/parro-it/libdesktop/workflows/Node.js%20CI/badge.svg)](https://github.com/parro-it/libdesktop)
+![example image](head-blog-home.png)
+![A WPS video](https://www.youtube.com/watch?v=SSPzfKRTiZY&t=410s)
+![a log](https://source.unsplash.com/random)
 
 
 ## Code snippets
