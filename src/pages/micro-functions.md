@@ -1,6 +1,11 @@
 # Modernize micro functions
 
-![People Cheering](head-blog-home.png)
+I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),
+a public list where I collect micro-packages built by me or by others
+that I use often.
+
+![A picture decribing micro functions](https://source.unsplash.com/gYqkbotfFKc/800x300)
+
 
 Something like 23 years ago I was starting to learn
 to use and write components using Visual Basic 6.
@@ -20,9 +25,6 @@ It was when I discovered Node.js and NPM that I finally find
 I have the right tools to build a really useful collection
 of packages.
 
-I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),
-a public list where I collect micro-packages built by me or by others
-that I use often.
 
 ![A tweet about micro functions ](https://twitter.com/nicklockwood/status/925738874873184256?ref_src=twsrc%5Etfw)
 

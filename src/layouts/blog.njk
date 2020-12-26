@@ -24,32 +24,10 @@
 
 
 <body>
-ciao
-  <div class="container">
-    <header>
-      <h1>Eban Blog</h1>
-      <div class="subtitle">
-        Thoughts on Javascript and C development.
-      </div>
-      <a class="github-button" href="https://github.com/parro-it/ebansoft.com" data-icon="octicon-watch" data-size="large"
-        data-show-count="true" aria-label="Follow this blog on GitHub">ebansoft.com</a>
-      <a class="github-button" href="https://github.com/parro-it" data-size="large" data-show-count="true"
-        aria-label="Follow @parro-it on GitHub">@parro-it</a>
-    </header>
+  {% block content %}
+  {% endblock %}
 
-    <section>
-      {% block content %}
-      {% endblock %}
-    </section>
-
-    <section class="credits">
-      <ul>
-        <li>
-          New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
-        </li>
-      </ul>
-    </section>
-  </div>
+  
    
 </body>
 

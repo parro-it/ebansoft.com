@@ -331,3 +331,34 @@ p > code {
   border-radius: 3px;
   color: #222;
 }
+
+.post header h1 {
+  font-size: x-large;
+  float: left;
+  margin: 0;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+
+}
+
+.post section h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.post header {
+  margin-top: 1em;
+  margin-bottom: 4em;
+  display: block;
+  height: 30px;
+}
+
+.post header .subtitle {
+  font-size: large;
+  float: right;
+  margin: 0;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
