@@ -1,6 +1,7 @@
-{% extends "../layouts/blog.njk" %}
-
-{% block content %}
+```njk
+{% extends ".layout" %}
+{% block post %}
+```
 
 ## ebansoft.com blog sources.
 
@@ -77,6 +78,7 @@ This is link without protocol: github.com/parro-it/ebansoft.com.
 ### C
 
 ```C
+/* an example of C code */
 int main(int argc, char** argv) {
     return 0;
 }
@@ -85,7 +87,9 @@ int main(int argc, char** argv) {
 ### Javascript
 
 ```javascript
+/* an example of Javascript code */
 function main(argc, argv) {
+    console.log("ciao");
     return 0;
 }
 ```
@@ -93,25 +97,35 @@ function main(argc, argv) {
 ### Typescript
 
 ```typescript
+/* an example of Typescript code */
 function main(args: Array<string>): number {
     return 0;
+}
+
+export async function* range(start: number, end: number): AsyncIterable<number> {
+    for (let i = start; i < end; i++) {
+        yield i;
+    }
 }
 ```
 
 ### HTML
 
 ```html
+<!-- an example of HTML code -->
 <html>
     <body class="visible">Hello world</body>
 </html>
 ```
 
 ### CSS
-
 ```css
+/* an example of CSS code */
 body.visible {
     display: block;
 }
 ```
 
-
+```njk
+{% endblock %}
+```

@@ -11,7 +11,8 @@
   </header>
 
   <section class="post">
-    {{mdContent| safe}}
+    {% block post %}
+    {% endblock %}
   </section>
 
   <section class="credits">

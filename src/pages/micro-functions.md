@@ -1,3 +1,9 @@
+```njk
+{% extends ".layout" %}
+{% block post %}
+```
+
+
 # Modernize micro functions
 
 I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),
@@ -48,3 +54,7 @@ So I wrote the first module of the collection, and here we are
 | slice  | map function      |
 
 __Photo by Elevate on Unsplash__
+
+```njk
+{% endblock %}
+```

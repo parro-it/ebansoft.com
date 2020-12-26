@@ -26,7 +26,7 @@ function build_site() {
 function on_sourcechanges_rebuild() {
   while inotifywait -r -e modify -e move -e create -e delete -e delete_self .; do
     previous=$all_tests_passed
-    test_all
+    build_site
     if [[ $all_tests_passed != $previous ]]; then
       if [[ $all_tests_passed == 1 ]]; then
         spd-say -y Italian+female5 'Sito ricostruito.'

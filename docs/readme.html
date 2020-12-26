@@ -35,8 +35,9 @@
   </header>
 
   <section class="post">
-    <p>{% extends &quot;../layouts/blog.njk&quot; %}</p>
-<p>{% block content %}</p>
+    
+
+</pre>
 <h2><a href="http://ebansoft.com">ebansoft.com</a> blog sources.</h2>
 <p>This page is just an example of the capacity of orgame app.</p>
 <h2>Some list of items</h2>
@@ -123,215 +124,43 @@ This is a quote. This page has been written in markdown.</p>
 <img src="https://source.unsplash.com/random" alt="a log"></p>
 <h2>Code snippets</h2>
 <h3>C</h3>
-<pre><code class="language-C"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
+<pre><code class="language-C"><span class="hljs-comment">/* an example of C code */</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
-</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1608673911385-18107">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="int main(int argc, char** argv) {
-    return 0;
-}
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608673911385-18107" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
-    const e = {
-        copy: (t = '', e = '') =>
-            new Promise((c, o) => {
-                const n = document.createElement('textarea'),
-                    d = e ? `\n\n${e}` : e;
-                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                try {
-                    const t = document.execCommand('copy');
-                    document.body.removeChild(n), t ? c() : o();
-                } catch (t) {
-                    document.body.removeChild(n), o();
-                }
-            }),
-        btnClick(t) {
-            const c = t && t.dataset ? t.dataset : {},
-                o = c.mdicNotifyId,
-                n = document.getElementById(o),
-                d = c.mdicNotifyDelay,
-                i = c.mdicCopyFailText;
-            e.copy(c.mdicContent, c.mdicAttachContent)
-                .then(() => {
-                    (n.style.display = 'block'),
-                        setTimeout(() => {
-                            n.style.display = 'none';
-                        }, d);
-                })
-                .catch(() => {
-                    alert(i);
-                });
-        },
-    };
-    e.btnClick(t);
-})(this);
-">copy</button></div></pre>
+</code></pre>
 <h3>Javascript</h3>
-<pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">argc, argv</span>) </span>{
+<pre><code class="language-javascript"><span class="hljs-comment">/* an example of Javascript code */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">argc, argv</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;ciao&quot;</span>);
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">javascript</span><div class="u-mdic-copy-notify" id="j-notify-1608673911392-79088">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="function main(argc, argv) {
-    return 0;
-}
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608673911392-79088" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
-    const e = {
-        copy: (t = '', e = '') =>
-            new Promise((c, o) => {
-                const n = document.createElement('textarea'),
-                    d = e ? `\n\n${e}` : e;
-                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                try {
-                    const t = document.execCommand('copy');
-                    document.body.removeChild(n), t ? c() : o();
-                } catch (t) {
-                    document.body.removeChild(n), o();
-                }
-            }),
-        btnClick(t) {
-            const c = t && t.dataset ? t.dataset : {},
-                o = c.mdicNotifyId,
-                n = document.getElementById(o),
-                d = c.mdicNotifyDelay,
-                i = c.mdicCopyFailText;
-            e.copy(c.mdicContent, c.mdicAttachContent)
-                .then(() => {
-                    (n.style.display = 'block'),
-                        setTimeout(() => {
-                            n.style.display = 'none';
-                        }, d);
-                })
-                .catch(() => {
-                    alert(i);
-                });
-        },
-    };
-    e.btnClick(t);
-})(this);
-">copy</button></div></pre>
+</code></pre>
 <h3>Typescript</h3>
-<pre><code class="language-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">args: <span class="hljs-built_in">Array</span>&lt;<span class="hljs-built_in">string</span>&gt;</span>): <span class="hljs-title">number</span> </span>{
+<pre><code class="language-typescript"><span class="hljs-comment">/* an example of Typescript code */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params">args: <span class="hljs-built_in">Array</span>&lt;<span class="hljs-built_in">string</span>&gt;</span>): <span class="hljs-title">number</span> </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">typescript</span><div class="u-mdic-copy-notify" id="j-notify-1608673911394-71959">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="function main(args: Array&lt;string&gt;): number {
-    return 0;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">range</span>(<span class="hljs-params">start: <span class="hljs-built_in">number</span>, end: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">AsyncIterable</span>&lt;<span class="hljs-title">number</span>&gt; </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = start; i &lt; end; i++) {
+        <span class="hljs-keyword">yield</span> i;
+    }
 }
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608673911394-71959" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
-    const e = {
-        copy: (t = '', e = '') =>
-            new Promise((c, o) => {
-                const n = document.createElement('textarea'),
-                    d = e ? `\n\n${e}` : e;
-                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                try {
-                    const t = document.execCommand('copy');
-                    document.body.removeChild(n), t ? c() : o();
-                } catch (t) {
-                    document.body.removeChild(n), o();
-                }
-            }),
-        btnClick(t) {
-            const c = t && t.dataset ? t.dataset : {},
-                o = c.mdicNotifyId,
-                n = document.getElementById(o),
-                d = c.mdicNotifyDelay,
-                i = c.mdicCopyFailText;
-            e.copy(c.mdicContent, c.mdicAttachContent)
-                .then(() => {
-                    (n.style.display = 'block'),
-                        setTimeout(() => {
-                            n.style.display = 'none';
-                        }, d);
-                })
-                .catch(() => {
-                    alert(i);
-                });
-        },
-    };
-    e.btnClick(t);
-})(this);
-">copy</button></div></pre>
+</code></pre>
 <h3>HTML</h3>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- an example of HTML code --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt;</span>Hello world<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">html</span><div class="u-mdic-copy-notify" id="j-notify-1608673911400-74801">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="&lt;html&gt;
-    &lt;body class=&quot;visible&quot;&gt;Hello world&lt;/body&gt;
-&lt;/html&gt;
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608673911400-74801" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
-    const e = {
-        copy: (t = '', e = '') =>
-            new Promise((c, o) => {
-                const n = document.createElement('textarea'),
-                    d = e ? `\n\n${e}` : e;
-                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                try {
-                    const t = document.execCommand('copy');
-                    document.body.removeChild(n), t ? c() : o();
-                } catch (t) {
-                    document.body.removeChild(n), o();
-                }
-            }),
-        btnClick(t) {
-            const c = t && t.dataset ? t.dataset : {},
-                o = c.mdicNotifyId,
-                n = document.getElementById(o),
-                d = c.mdicNotifyDelay,
-                i = c.mdicCopyFailText;
-            e.copy(c.mdicContent, c.mdicAttachContent)
-                .then(() => {
-                    (n.style.display = 'block'),
-                        setTimeout(() => {
-                            n.style.display = 'none';
-                        }, d);
-                })
-                .catch(() => {
-                    alert(i);
-                });
-        },
-    };
-    e.btnClick(t);
-})(this);
-">copy</button></div></pre>
+</code></pre>
 <h3>CSS</h3>
-<pre><code class="language-css"><span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.visible</span> {
+<pre><code class="language-css"><span class="hljs-comment">/* an example of CSS code */</span>
+<span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.visible</span> {
     <span class="hljs-attribute">display</span>: block;
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">css</span><div class="u-mdic-copy-notify" id="j-notify-1608673911402-42820">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="body.visible {
-    display: block;
-}
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1608673911402-42820" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
-    const e = {
-        copy: (t = '', e = '') =>
-            new Promise((c, o) => {
-                const n = document.createElement('textarea'),
-                    d = e ? `\n\n${e}` : e;
-                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
-                try {
-                    const t = document.execCommand('copy');
-                    document.body.removeChild(n), t ? c() : o();
-                } catch (t) {
-                    document.body.removeChild(n), o();
-                }
-            }),
-        btnClick(t) {
-            const c = t && t.dataset ? t.dataset : {},
-                o = c.mdicNotifyId,
-                n = document.getElementById(o),
-                d = c.mdicNotifyDelay,
-                i = c.mdicCopyFailText;
-            e.copy(c.mdicContent, c.mdicAttachContent)
-                .then(() => {
-                    (n.style.display = 'block'),
-                        setTimeout(() => {
-                            n.style.display = 'none';
-                        }, d);
-                })
-                .catch(() => {
-                    alert(i);
-                });
-        },
-    };
-    e.btnClick(t);
-})(this);
-">copy</button></div></pre>
+</code></pre>
+<pre>
 
   </section>
 
