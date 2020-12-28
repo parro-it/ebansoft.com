@@ -1,0 +1,96 @@
+{
+    "src/pages/home.md": {
+        "title": "EbanSoft blog | home",
+        "subtitle": "Thoughts on Javascript and C development.",
+        "published": "2020-12-28T07:30:06.457Z",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ]
+    },
+    "src/posts/blog-description.md": {
+        "title": "Example post of an `orgame` managed blog.",
+        "subtitle": "This page is just an example of the capacity of orgame app.",
+        "published": "2020-12-28T07:30:06.391Z",
+        "draft": true,
+        "tags": [
+            "orgame",
+            "typescript",
+            "blog"
+        ],
+        "categories": [
+            "orgame"
+        ]
+    },
+    "src/posts/blog-posts.md": {
+        "title": "Future blog posts",
+        "subtitle": "",
+        "published": "2020-12-28T07:30:06.732Z",
+        "draft": true,
+        "tags": [
+            "blog"
+        ],
+        "categories": [
+            "uncategorised"
+        ]
+    },
+    "src/posts/libdesktop-introduction.md": {
+        "title": "Introduction to LibDesktop experiment.",
+        "subtitle": "",
+        "published": "2020-12-28T07:30:06.738Z",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop"
+        ]
+    },
+    "src/posts/memory-management.md": {
+        "title": "Memory management and widgets lifetime.",
+        "subtitle": "",
+        "published": "2020-12-28T07:30:06.741Z",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop"
+        ]
+    },
+    "src/posts/micro-functions.md": {
+        "title": "Implementation of async micro-helpers functions.",
+        "subtitle": "I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),\na public list where I collect micro-packages built by me or by others\nthat I use often.\n",
+        "published": "2020-12-28T07:30:06.743Z",
+        "draft": true,
+        "tags": [
+            "javascript",
+            "typescript",
+            "awesome-list"
+        ],
+        "categories": [
+            "posts"
+        ]
+    },
+    "src/posts/the-event-loop.md": {
+        "title": "Integrating the UI event loop with the Node js one.",
+        "subtitle": "",
+        "published": "2020-12-28T07:30:07.332Z",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop"
+        ]
+    }
+}

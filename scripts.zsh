@@ -8,7 +8,7 @@ export all_tests_passed=0
 
 function build_site() {
   verbose=$1
-  if orgame src/client src/pages docs; then
+  if orgame src/client src/posts src/pages docs; then
     printf $GREEN
     figlet 'Sito ricostruito.'
     printf $NORMAL
@@ -24,6 +24,7 @@ function build_site() {
 }
 
 function on_sourcechanges_rebuild() {
+  build_site
   while inotifywait -r -e modify -e move -e create -e delete -e delete_self .; do
     previous=$all_tests_passed
     build_site

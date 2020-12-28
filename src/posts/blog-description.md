@@ -1,50 +1,84 @@
-```njk
-{% extends ".layout" %}
-{% block post %}
-```
+{{ useLayout("./.layout") }}
+{{ title("Example post of an `orgame` managed blog.") }}
+{{ subtitle("This page is just an example of the capacity of orgame app.") }}
+{{ categories(["orgame"]) }}
+{{ tags(["orgame", "typescript", "blog"]) }}
 
-## ebansoft.com blog sources.
+# ebansoft.com blog sources.
 
 This page is just an example of the capacity of orgame app.
 
+## Typography
+
+The site use a tetratonic scale to define 5 level 
+of font-sizes.
+
+![The tetratonic scale](media/musical-tetratonic-scale.png)
+
+The size levels used in various context are: 
+
+1) used for headers `h1` and `h2` (they greatly differs by having a different `font-family`). The [header of this chapter](#Typography) is an example of
+an `h2` header, which uses the "Averia Serif Libre" font.
+The title of the page is an `h1` header, using a "Cinzel Decorative" font.
+
+2) used for headers `h3`
+3) used for headers `h4`, `h5`, `h6`. 
+4) used for normal body text (such has this one). This size
+correspond to 1em, is set by default to 21px, and varies according 
+to page media size.
+5) used as small text, such as for `table` ot `figure` captions.
+
+Herebelow are example of headers of levels 3,4,5,6.
+
+### third
+
+Some normal text paragraph
+
+#### fourth
+
+Some normal text paragraph
+
+##### fifth
+
+Some normal text paragraph
+
+###### sixth
+
+Some normal text paragraph
+
+
 ## Some list of items
+
+### With bullets:
 
 * item 1
 * item 2
 * item 3
 
+### Numbered:
+
 1) numbered item
 2) numbered item
 3) numbered item
 
-## Normal text
-
-This is a normal paragraph of text. 
-This is a citation: `HTML` `orgame`
-
-## Task lists
+### Task list:
 
 * [ ] - task 1
 * [X] - task 2, done!
 * [ ] - task 3
 * [X] - task 4, done!
 
-## Headers
 
-### third
+## Normal text
 
-#### fourth
-
-##### fifth
-
-###### sixth
 
 ## Links
 
-Proudly built with [orgame](https://github.com/parro-it/orgame).
+This is a normal paragraph of text. 
+This is a citation: `HTML` `orgame`.
 
+An md link: [orgame](https://github.com/parro-it/orgame).
 This is a bare link: https://github.com/parro-it/ebansoft.com.
-
 This is link without protocol: github.com/parro-it/ebansoft.com.
 
 ## Tables
@@ -124,8 +158,4 @@ export async function* range(start: number, end: number): AsyncIterable<number> 
 body.visible {
     display: block;
 }
-```
-
-```njk
-{% endblock %}
 ```

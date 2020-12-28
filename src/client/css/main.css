@@ -4,21 +4,44 @@ html {
 
 body {
   margin: 0;
-  line-height: 1.6;
-  font-family: 'Averia Serif Libre', sans-serif;
-  font-weight: 400;
   background-color: #2d2d2d;
   color: #b3b9c5;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.2;
+body {
+  font-family: 'Averia Serif Libre', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
 }
 
-  
+
+pre code {
+  font-family: 'Fira Code', monospace;
+  font-size:1.2599em;
+}
+
+.small {
+  font-size:.7937em;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size:1.5874em;
+}
+
+h6,h5,h4 {
+  font-size:1.2599em;
+}
 
 a {
   color: #ffeea6;
@@ -40,13 +63,7 @@ strong {
 }
 
 p {
-  font-size: 1.2rem;
   color: #90959c;
-  margin: 2rem 0;
-}
-
-li {
-  font-size: 1.2rem;
 }
 
 img {
@@ -56,17 +73,11 @@ img {
   height: auto;
 }
 
-
-
 header {
   text-align: center;
 }
 
 h1 {
-  font-family: 'Cinzel Decorative', sans-serif;
-  font-size: 3rem;
-  font-weight: 400;
-  font-size: 6rem;
   margin-bottom: 0;
   color: #ffeea6;
   background: linear-gradient(#ffeea6, #ffd479);
@@ -75,62 +86,15 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (min-width: 700px) {
-  h1 {
-    font-size: 4.5rem;
-  }
-}
-
-h1:not(:first-child),
-h2:not(:first-child),
-h3:not(:first-child) {
-  margin-top: 2rem;
-}
-
-@media screen and (min-width: 700px) {
-  h1:not(:first-child),
-  h2:not(:first-child),
-  h3:not(:first-child) {
-    margin-top: 4rem;
-  }
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin: 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #444;
-}
-
-h3 {
-  font-size: 1.4rem;
-  margin: 1rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #444;
-}
-
-@media screen and (min-width: 700px) {
-  h2,
-  h3 {
-    margin: 2rem 0;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.6rem;
-  }
-}
-
 cite {
   display: block;
-  font-size: 1.2rem;
   text-align: right;
 }
 
 .subtitle {
-  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  font-size: .7937em;
+  font-style: italic;
 }
 
 .container {
@@ -145,13 +109,6 @@ cite {
   justify-content: center;
 }
 
-.circle {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  margin: 0 0.5rem 0 0;
-}
 
 h2::before,h3::before,h4::before,h5::before,h6::before {
   display: list-item;
@@ -170,7 +127,6 @@ pre, blockquote, table, iframe, figure {
   padding: 16px;
   background: black;
   box-shadow: 10px 10px 26px rgba(0,0,0,0.1);
-  font-size: 1.5em;
   margin: 0;
   margin-bottom: 20px !important;
   overflow: auto;
@@ -205,9 +161,6 @@ table th {
   
 }
 
-pre code {
-  font-family: 'Fira Code', monospace;
-}
 
 blockquote {
   padding: 15px;
@@ -313,9 +266,6 @@ h6::before {
   background-color: #62cfcf;
 }
 
-.credits {
-  margin: 3rem 0;
-}
 
 ::-moz-selection {
   background-color: rgba(255, 255, 255, 0.1);
@@ -333,17 +283,15 @@ p > code {
 }
 
 .post header h1 {
-  font-size: x-large;
   float: left;
   margin: 0;
   display: block;
   height: 30px;
   line-height: 30px;
-
+  font-size: 1em;
 }
 
 .post section h1 {
-  font-size: 2em;
   margin-bottom: 1em;
 }
 
@@ -355,7 +303,6 @@ p > code {
 }
 
 .post header .subtitle {
-  font-size: large;
   float: right;
   margin: 0;
   display: block;

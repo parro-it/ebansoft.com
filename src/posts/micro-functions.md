@@ -1,8 +1,11 @@
-```njk
-{% extends ".layout" %}
-{% block post %}
-```
-
+{{ useLayout("./.layout") }}
+{{ title("Implementation of async micro-helpers functions.") }}
+{{ subtitle("I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),
+a public list where I collect micro-packages built by me or by others
+that I use often.
+") }}
+{{ categories(["posts"]) }}
+{{ tags(["javascript", "typescript", "awesome-list"]) }}
 
 # Modernize micro functions
 
@@ -54,7 +57,3 @@ So I wrote the first module of the collection, and here we are
 | slice  | map function      |
 
 __Photo by Elevate on Unsplash__
-
-```njk
-{% endblock %}
-```

@@ -27,7 +27,7 @@
   
 <div class="container post">  
   <header>
-    <h1>Eban Blog</h1>
+    <h1>Eban CIAO Blog</h1>
     <div class="subtitle">
       Thoughts on Javascript and C development.
     </div>
@@ -35,10 +35,7 @@
   </header>
 
   <section class="post">
-    
-
-</pre>
-<h1>Modernize micro functions</h1>
+    <h1>Modernize micro functions</h1>
 <p>I wrote <a href="https://github.com/parro-it/awesome-micro-npm-packages">awesome-micro-npm-packages</a>,
 a public list where I collect micro-packages built by me or by others
 that I use often.</p>
@@ -51,7 +48,7 @@ and so I start to write my collection of libraries.</p>
 the tools I was using.</p>
 <p>Maintaining a collection of independent libraries,
 and managing dependencies upgrades and compatibility
-was a nightmare. The situation slightly improve with <a href="http://Dot.NET">Dot.NET</a>,
+was a nightmare. The situation slightly improve with Dot.NET,
 but still...</p>
 <p>It was when I discovered Node.js and NPM that I finally find
 I have the right tools to build a really useful collection
@@ -65,7 +62,44 @@ and typescript type descriptions:</p>
 <pre><code class="language-js"><span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;map&quot;</span>;
 
 <span class="hljs-built_in">console</span>.log(map(<span class="hljs-string">&quot;ciao&quot;</span>, toUpper))
-</code></pre>
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">js</span><div class="u-mdic-copy-notify" id="j-notify-1609140606753-38638">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="import {map} from &quot;map&quot;;
+
+console.log(map(&quot;ciao&quot;, toUpper))
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609140606753-38638" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+    const e = {
+        copy: (t = '', e = '') =>
+            new Promise((c, o) => {
+                const n = document.createElement('textarea'),
+                    d = e ? `\n\n${e}` : e;
+                (n.value = `${t}${d}`), document.body.appendChild(n), n.select();
+                try {
+                    const t = document.execCommand('copy');
+                    document.body.removeChild(n), t ? c() : o();
+                } catch (t) {
+                    document.body.removeChild(n), o();
+                }
+            }),
+        btnClick(t) {
+            const c = t && t.dataset ? t.dataset : {},
+                o = c.mdicNotifyId,
+                n = document.getElementById(o),
+                d = c.mdicNotifyDelay,
+                i = c.mdicCopyFailText;
+            e.copy(c.mdicContent, c.mdicAttachContent)
+                .then(() => {
+                    (n.style.display = 'block'),
+                        setTimeout(() => {
+                            n.style.display = 'none';
+                        }, d);
+                })
+                .catch(() => {
+                    alert(i);
+                });
+        },
+    };
+    e.btnClick(t);
+})(this);
+">copy</button></div></pre>
 <p>So I wrote the first module of the collection, and here we are</p>
 <table>
 <thead>
@@ -90,7 +124,6 @@ and typescript type descriptions:</p>
 </tbody>
 </table>
 <p><strong>Photo by Elevate on Unsplash</strong></p>
-<pre>
 
   </section>
 
