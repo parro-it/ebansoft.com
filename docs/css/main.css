@@ -1,6 +1,3 @@
-html {
-  font-size: 1rem;
-}
 
 body {
   margin: 0;
@@ -9,11 +6,10 @@ body {
 }
 
 body {
-  font-family: 'Averia Serif Libre', sans-serif;
-  font-weight: 400;
-  font-size: 21px;
+  font-family: 'Averia Serif Libre', serif;
+  font-weight: normal;
+  font-size: 23px;
 }
-
 
 pre code {
   font-family: 'Fira Code', monospace;
@@ -24,23 +20,62 @@ pre code {
   font-size:.7937em;
 }
 
+h1,h2,h3,h4,h5,h6,p,ol,ul,figure,pre {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
 h1 {
-  font-family: 'Cinzel Decorative', sans-serif;
   font-size: 2em;
-  font-weight: 400;
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 
 
 h2 {
   font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.55em;
+  margin-bottom: 0.25em;
 }
 
 h3 {
   font-size:1.5874em;
+  font-weight: bold;
+  margin-top: 0.55em;
+  margin-bottom: 0.25em;
 }
 
 h6,h5,h4 {
   font-size:1.2599em;
+  margin-top: 1.42em;
+  margin-bottom: 0.25em;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+h6 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+p, li {
+  line-height: 1.5em;
+  letter-spacing: .0046rem;
+  text-align: justify;
+  margin-bottom: 0.5em;
+}
+ul,ol {
+  margin-bottom: 0.5em;
 }
 
 a {
@@ -57,8 +92,7 @@ a img:hover {
   text-decoration: none;
 }
 
-b,
-strong {
+b, strong {
   font-weight: bolder;
 }
 
@@ -78,7 +112,6 @@ header {
 }
 
 h1 {
-  margin-bottom: 0;
   color: #ffeea6;
   background: linear-gradient(#ffeea6, #ffd479);
   -webkit-background-clip: text;
@@ -113,8 +146,12 @@ cite {
 h2::before,h3::before,h4::before,h5::before,h6::before {
   display: list-item;
   list-style-type: disc;
-  list-style-position: inside;
   content: "";
+  font-size: 2em;
+  list-style-position: outside;
+  margin: 0;
+    padding: 0;
+    line-height: 0.5em;
 }
 
 h2,h3,h4,h5,h6 {
@@ -128,10 +165,12 @@ pre, blockquote, table, iframe, figure {
   background: black;
   box-shadow: 10px 10px 26px rgba(0,0,0,0.1);
   margin: 0;
-  margin-bottom: 20px !important;
+  margin-top: 42px;
+  margin-bottom: 42px;
   overflow: auto;
   width: 100%;
 }
+
 
 table {
   border-collapse: collapse;
@@ -140,7 +179,7 @@ table {
   min-width: 60%;
   max-width: 90%;
   text-align: left;
-  margin: auto;
+  margin: 42px auto;
 }
 
 tr:first-child {
@@ -164,10 +203,8 @@ table th {
 
 blockquote {
   padding: 15px;
-  margin: 0px;
   text-align: left;
   font-style: italic;
-  padding-bottom: 3em;
 }
 
 blockquote > p {
@@ -276,10 +313,12 @@ h6::before {
 }
 
 p > code {
-  background-color: #fca369;
-  padding: 3px 6px;
-  border-radius: 3px;
-  color: #222;
+    padding: 0px 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 3px;
+    color: #fca369;
+    font-weight: bold;
+    font-family: 'Fira Code', monospace;
 }
 
 .post header h1 {
@@ -291,13 +330,9 @@ p > code {
   font-size: 1em;
 }
 
-.post section h1 {
-  margin-bottom: 1em;
-}
-
 .post header {
   margin-top: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   display: block;
   height: 30px;
 }

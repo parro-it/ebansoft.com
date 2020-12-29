@@ -71,6 +71,10 @@ Some normal text paragraph
 
 ## Normal text
 
+000000000 111111111 222222222 333333333 444444444 5555555556
+123456789 123456789 123456789 123456789 123456789 1234567890
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 ## Links
 
@@ -101,9 +105,13 @@ This is link without protocol: github.com/parro-it/ebansoft.com.
 > This is another quote
 
 ## Images
-[![spoiler](https://github.com/parro-it/libdesktop/workflows/Node.js%20CI/badge.svg)](https://github.com/parro-it/libdesktop)
+
+A simple badge [![spoiler](https://github.com/parro-it/libdesktop/workflows/Node.js%20CI/badge.svg)](https://github.com/parro-it/libdesktop) inlined within body text.
+
 ![example image](head-blog-home.png)
+
 ![A WPS video](https://www.youtube.com/watch?v=SSPzfKRTiZY&t=410s)
+
 ![a log](https://source.unsplash.com/random)
 
 
