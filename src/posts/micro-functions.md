@@ -7,6 +7,7 @@ that I use often.
 {{ categories(["posts"]) }}
 {{ tags(["javascript", "typescript", "awesome-list"]) }}
 {{ heading("A picture decribing micro functions","https://source.unsplash.com/gYqkbotfFKc/800x250") }}
+{{ published("2021-07-07") }}
 
 # {{ meta.title }}
 

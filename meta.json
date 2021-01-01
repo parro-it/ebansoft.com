@@ -108,8 +108,8 @@
         "title": "Implementation of async micro-helpers functions.",
         "subtitle": "I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),\na public list where I collect micro-packages built by me or by others\nthat I use often.\n",
         "heading": "",
-        "published": "2021-01-01T20:26:04.692Z",
-        "publishedFormatted": "January 1, 2021",
+        "published": "2021-07-07",
+        "publishedFormatted": "July 7, 2021",
         "draft": true,
         "tags": [
             "javascript",
@@ -151,7 +151,7 @@
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-01T20:28:31.398Z",
+        "published": "2021-01-01T21:43:47.019Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -170,7 +170,7 @@
         "title": "EbanSoft blog | drafts",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-01T20:28:31.366Z",
+        "published": "2021-01-01T21:43:46.986Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -329,8 +329,8 @@
         "title": "Ebansoft.com color theme",
         "subtitle": "How how choose the color palette of this web site.",
         "heading": "",
-        "published": "2021-03-07",
-        "publishedFormatted": "March 7, 2021",
+        "published": "2021-08-07",
+        "publishedFormatted": "August 7, 2021",
         "draft": true,
         "tags": [
             "node",
