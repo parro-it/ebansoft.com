@@ -1,7 +1,7 @@
 {{ useLayout("./.layout") }}
 {{ title("Integrating the UI event loop with the Node js one.") }}
 {{ subtitle("") }}
-{{ categories(["libdesktop"]) }}
+{{ categories(["libdesktop", "posts"]) }}
 {{ tags(["node", "typescript", "packages"]) }}
 
 

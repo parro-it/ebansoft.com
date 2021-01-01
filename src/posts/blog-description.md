@@ -7,6 +7,13 @@
 # ebansoft.com blog sources.
 
 This page is just an example of the capacity of orgame app.
+ 
+## Automatic TOC
+
+Write `[[toc]]` in any paragraph in order to generate
+a table of content section.
+
+[[toc]]
 
 ## Typography
 

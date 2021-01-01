@@ -1,8 +1,12 @@
 {
     "src/pages/home.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
-        "published": "2020-12-29T07:36:45.922Z",
+        "heading": "",
+        "published": "2021-01-01T17:41:32.864Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -15,9 +19,13 @@
         "url": "home.html"
     },
     "src/posts/blog-description.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "Example post of an `orgame` managed blog.",
         "subtitle": "This page is just an example of the capacity of orgame app.",
-        "published": "2020-12-29T07:34:52.110Z",
+        "heading": "",
+        "published": "2021-01-01T17:38:35.528Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "orgame",
@@ -32,9 +40,13 @@
         "url": "blog-description.html"
     },
     "src/posts/blog-posts.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "Future blog posts",
         "subtitle": "",
-        "published": "2020-12-29T07:34:52.433Z",
+        "heading": "",
+        "published": "2021-01-01T17:38:35.778Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "blog"
@@ -47,26 +59,35 @@
         "url": "blog-posts.html"
     },
     "src/posts/libdesktop-introduction.md": {
-        "title": "Introduction to LibDesktop experiment.",
-        "subtitle": "",
-        "published": "2020-12-29T07:34:52.442Z",
-        "draft": true,
+        "headingCaption": "Burano, Venice, Italy",
+        "headingFigure": "https://source.unsplash.com/DYb-pCHnubE/800x450",
+        "title": "Introduction to libDesktop.",
+        "subtitle": "why I'll soon archive libui-node and what library I'll suggest as replacement.",
+        "heading": "",
+        "published": "2021-01-01T17:38:35.785Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": false,
         "tags": [
             "node",
             "typescript",
             "packages"
         ],
         "categories": [
-            "libdesktop"
+            "libdesktop",
+            "posts"
         ],
         "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/libdesktop-introduction.md",
         "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/libdesktop-introduction.html",
         "url": "libdesktop-introduction.html"
     },
     "src/posts/memory-management.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "Memory management and widgets lifetime.",
         "subtitle": "",
-        "published": "2020-12-29T07:34:52.446Z",
+        "heading": "",
+        "published": "2021-01-01T17:38:35.791Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "node",
@@ -74,16 +95,21 @@
             "packages"
         ],
         "categories": [
-            "libdesktop"
+            "libdesktop",
+            "posts"
         ],
         "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/memory-management.md",
         "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/memory-management.html",
         "url": "memory-management.html"
     },
     "src/posts/micro-functions.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "Implementation of async micro-helpers functions.",
         "subtitle": "I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),\na public list where I collect micro-packages built by me or by others\nthat I use often.\n",
-        "published": "2020-12-29T07:34:52.449Z",
+        "heading": "",
+        "published": "2021-01-01T17:38:35.794Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "javascript",
@@ -98,9 +124,13 @@
         "url": "micro-functions.html"
     },
     "src/posts/the-event-loop.md": {
+        "headingCaption": "",
+        "headingFigure": "",
         "title": "Integrating the UI event loop with the Node js one.",
         "subtitle": "",
-        "published": "2020-12-29T07:34:52.977Z",
+        "heading": "",
+        "published": "2021-01-01T17:38:36.218Z",
+        "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
             "node",
@@ -108,7 +138,8 @@
             "packages"
         ],
         "categories": [
-            "libdesktop"
+            "libdesktop",
+            "posts"
         ],
         "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/the-event-loop.md",
         "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/the-event-loop.html",

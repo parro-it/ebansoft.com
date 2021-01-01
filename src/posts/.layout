@@ -15,12 +15,7 @@
   </section>
 
   <section class="credits">
-    <ul>
-      <li>
-        New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
-      </li>
-
-    </ul>
+    New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
   </section>
 </div>
 {% endblock %}
