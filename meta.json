@@ -5,7 +5,7 @@
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-01T17:41:32.864Z",
+        "published": "2021-01-01T18:11:14.380Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -24,7 +24,7 @@
         "title": "Example post of an `orgame` managed blog.",
         "subtitle": "This page is just an example of the capacity of orgame app.",
         "heading": "",
-        "published": "2021-01-01T17:38:35.528Z",
+        "published": "2021-01-01T20:26:04.395Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -45,7 +45,7 @@
         "title": "Future blog posts",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-01T17:38:35.778Z",
+        "published": "2021-01-01T20:26:04.662Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -60,12 +60,12 @@
     },
     "src/posts/libdesktop-introduction.md": {
         "headingCaption": "Burano, Venice, Italy",
-        "headingFigure": "https://source.unsplash.com/DYb-pCHnubE/800x450",
+        "headingFigure": "https://source.unsplash.com/DYb-pCHnubE/800x250",
         "title": "Introduction to libDesktop.",
         "subtitle": "why I'll soon archive libui-node and what library I'll suggest as replacement.",
         "heading": "",
-        "published": "2021-01-01T17:38:35.785Z",
-        "publishedFormatted": "January 1, 2021",
+        "published": "2021-01-07",
+        "publishedFormatted": "January 7, 2021",
         "draft": false,
         "tags": [
             "node",
@@ -81,13 +81,13 @@
         "url": "libdesktop-introduction.html"
     },
     "src/posts/memory-management.md": {
-        "headingCaption": "",
-        "headingFigure": "",
+        "headingCaption": "Plastic model of human brain.",
+        "headingFigure": "https://source.unsplash.com/igwG8aIaypo/800x250",
         "title": "Memory management and widgets lifetime.",
-        "subtitle": "",
+        "subtitle": "How libDesktop manage memory allocation.",
         "heading": "",
-        "published": "2021-01-01T17:38:35.791Z",
-        "publishedFormatted": "January 1, 2021",
+        "published": "2021-06-07",
+        "publishedFormatted": "June 7, 2021",
         "draft": true,
         "tags": [
             "node",
@@ -103,12 +103,12 @@
         "url": "memory-management.html"
     },
     "src/posts/micro-functions.md": {
-        "headingCaption": "",
-        "headingFigure": "",
+        "headingCaption": "A picture decribing micro functions",
+        "headingFigure": "https://source.unsplash.com/gYqkbotfFKc/800x250",
         "title": "Implementation of async micro-helpers functions.",
         "subtitle": "I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),\na public list where I collect micro-packages built by me or by others\nthat I use often.\n",
         "heading": "",
-        "published": "2021-01-01T17:38:35.794Z",
+        "published": "2021-01-01T20:26:04.692Z",
         "publishedFormatted": "January 1, 2021",
         "draft": true,
         "tags": [
@@ -124,13 +124,13 @@
         "url": "micro-functions.html"
     },
     "src/posts/the-event-loop.md": {
-        "headingCaption": "",
-        "headingFigure": "",
+        "headingCaption": "Color palette in 'Oil Painting Village' Dafen, Shenzhen.",
+        "headingFigure": "https://source.unsplash.com/AP-29z0BTmA/800x250",
         "title": "Integrating the UI event loop with the Node js one.",
-        "subtitle": "",
+        "subtitle": "How how choose the color palette of this web site.",
         "heading": "",
-        "published": "2021-01-01T17:38:36.218Z",
-        "publishedFormatted": "January 1, 2021",
+        "published": "2021-03-07",
+        "publishedFormatted": "March 7, 2021",
         "draft": true,
         "tags": [
             "node",
@@ -144,5 +144,246 @@
         "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/the-event-loop.md",
         "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/the-event-loop.html",
         "url": "the-event-loop.html"
+    },
+    "src/pages/index.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "EbanSoft blog | home",
+        "subtitle": "Thoughts on Javascript and C development.",
+        "heading": "",
+        "published": "2021-01-01T20:28:16.786Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/pages/index.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/index.html",
+        "url": "index.html"
+    },
+    "src/pages/drafts.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "EbanSoft blog | drafts",
+        "subtitle": "Thoughts on Javascript and C development.",
+        "heading": "",
+        "published": "2021-01-01T20:28:16.752Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/pages/drafts.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/drafts.html",
+        "url": "drafts.html"
+    },
+    "src/posts/napi-helpers.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:05.074Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/napi-helpers.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/napi-helpers.html",
+        "url": "napi-helpers.html"
+    },
+    "src/posts/manage-ui-events-in-libdesktop.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:04.687Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/manage-ui-events-in-libdesktop.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/manage-ui-events-in-libdesktop.html",
+        "url": "manage-ui-events-in-libdesktop.html"
+    },
+    "src/posts/custom-widgets-development-in-libdesktop.md": {
+        "headingCaption": "Customized colorful little stones.",
+        "headingFigure": "https://source.unsplash.com/7h4ladPzhn0/800x250",
+        "title": "Custom widgets development in libDesktop.",
+        "subtitle": "How to develop a custom libDesktop widget in native Node.js add-on.",
+        "heading": "",
+        "published": "2021-02-07",
+        "publishedFormatted": "February 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages",
+            "libdesktop"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/custom-widgets-development-in-libdesktop.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/custom-widgets-development-in-libdesktop.html",
+        "url": "custom-widgets-development-in-libdesktop.html"
+    },
+    "src/posts/libdesktop-widgets.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:04.686Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/libdesktop-widgets.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/libdesktop-widgets.html",
+        "url": "libdesktop-widgets.html"
+    },
+    "src/posts/how-to-create-a-custom-event.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:04.681Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/how-to-create-a-custom-event.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/how-to-create-a-custom-event.html",
+        "url": "how-to-create-a-custom-event.html"
+    },
+    "src/posts/properties-and-string-management.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:05.078Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/properties-and-string-management.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/properties-and-string-management.html",
+        "url": "properties-and-string-management.html"
+    },
+    "src/posts/ebansoft-blog-typography.md": {
+        "headingCaption": "This Typewriter is Expensive",
+        "headingFigure": "https://source.unsplash.com/63eWgXwdGJo/800x250",
+        "title": "How I choose Ebansoft.com font families and sizes.",
+        "subtitle": "How I choose Ebansoft.com font families and sizes.",
+        "heading": "",
+        "published": "2021-05-07",
+        "publishedFormatted": "May 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/ebansoft-blog-typography.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/ebansoft-blog-typography.html",
+        "url": "ebansoft-blog-typography.html"
+    },
+    "src/posts/ebansoft-blog-colors.md": {
+        "headingCaption": "Color palette in 'Oil Painting Village' Dafen, Shenzhen.",
+        "headingFigure": "https://source.unsplash.com/AP-29z0BTmA/800x250",
+        "title": "Ebansoft.com color theme",
+        "subtitle": "How how choose the color palette of this web site.",
+        "heading": "",
+        "published": "2021-03-07",
+        "publishedFormatted": "March 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/ebansoft-blog-colors.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/ebansoft-blog-colors.html",
+        "url": "ebansoft-blog-colors.html"
+    },
+    "src/posts/ebansoft-blog-responsive-page.md": {
+        "headingCaption": "A page with a really complex drawing of layouts.",
+        "headingFigure": "https://source.unsplash.com/0w1MiTY78h0/800x250",
+        "title": "How I built Ebansoft.com responsive layout.",
+        "subtitle": "How I how built Ebansoft.com responsive layout using CSS.",
+        "heading": "",
+        "published": "2021-04-07",
+        "publishedFormatted": "April 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/ebansoft-blog-responsive-page.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/ebansoft-blog-responsive-page.html",
+        "url": "ebansoft-blog-responsive-page.html"
+    },
+    "src/posts/orgame-static-website-builder.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-01T20:26:05.076Z",
+        "publishedFormatted": "January 1, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/posts/orgame-static-website-builder.md",
+        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/orgame-static-website-builder.html",
+        "url": "orgame-static-website-builder.html"
     }
 }

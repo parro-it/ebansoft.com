@@ -6,15 +6,13 @@ that I use often.
 ") }}
 {{ categories(["posts"]) }}
 {{ tags(["javascript", "typescript", "awesome-list"]) }}
+{{ heading("A picture decribing micro functions","https://source.unsplash.com/gYqkbotfFKc/800x250") }}
 
-# Modernize micro functions
+# {{ meta.title }}
 
-I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),
-a public list where I collect micro-packages built by me or by others
-that I use often.
+![{{ meta.headingCaption }}]({{ meta.headingFigure }})
 
-![A picture decribing micro functions](https://source.unsplash.com/gYqkbotfFKc/800x300)
-
+{{ meta.subtitle }}
 
 Something like 23 years ago I was starting to learn
 to use and write components using Visual Basic 6.

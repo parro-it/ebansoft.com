@@ -2,9 +2,10 @@
 {{ title("Introduction to libDesktop.") }}
 {{ subtitle("why I'll soon archive libui-node and what library I'll suggest as replacement.") }}
 {{ draft(false) }}
+{{ published("2021-01-07") }}
 {{ categories(["libdesktop", "posts"]) }}
 {{ tags(["node", "typescript", "packages"]) }}
-{{ heading("Burano, Venice, Italy","https://source.unsplash.com/DYb-pCHnubE/800x450") }}
+{{ heading("Burano, Venice, Italy","https://source.unsplash.com/DYb-pCHnubE/800x250") }}
 
 # {{ meta.title }}
 

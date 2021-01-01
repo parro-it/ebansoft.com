@@ -1,5 +1,7 @@
 {% extends "../layouts/blog.njk" %}
 
+
+
 {% block content %}
 <div class="container post">  
   <header>
@@ -14,9 +16,6 @@
     {{content| safe}}
   </section>
 
-  <section class="credits">
-    New Moon theme made by <a href="https://www.taniarascia.com/" rel="noopener" target="_blank">Tania Rascia</a></p>
-  </section>
 </div>
 {% endblock %}
     
