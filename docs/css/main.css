@@ -1,23 +1,25 @@
+@import "new-moon.css";
+@import "typography.css";
 
 body {
   margin: 0;
-  background-color: #2d2d2d;
-  color: #b3b9c5;
+  background-color: var(--Darkest);
+  color: var(--Light);
 }
 
 body {
   font-family: 'Averia Serif Libre', serif;
   font-weight: normal;
-  font-size: 23px;
+  font-size: var(--Size4);
 }
 
 pre code {
   font-family: 'Fira Code', monospace;
-  font-size:1.2599em;
+  font-size: var(--Size3); 
 }
 
 .small {
-  font-size:.7937em;
+  font-size: var(--Size5); 
 }
 
 h1,h2,h3,h4,h5,h6,p,ol,ul,figure,pre {
@@ -29,28 +31,28 @@ h1,h2,h3,h4,h5,h6,p,ol,ul,figure,pre {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: var(--Size1);
   font-weight: bold;
   margin: 0.5em 0;
 }
 
 
 h2 {
-  font-size: 2em;
+  font-size: var(--Size1);
   font-weight: bold;
   margin-top: 0.55em;
   margin-bottom: 0.25em;
 }
 
 h3 {
-  font-size:1.5874em;
+  font-size: var(--Size2);
   font-weight: bold;
   margin-top: 0.55em;
   margin-bottom: 0.25em;
 }
 
 h6,h5,h4 {
-  font-size:1.2599em;
+  font-size: var(--Size3);
   margin-top: 1.42em;
   margin-bottom: 0.25em;
 }
@@ -79,13 +81,13 @@ ul,ol {
 }
 
 a {
-  color: #ffeea6;
+  color: var(--LightYellow);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #ffd479;
+  color: var(--Light);
 }
 
 a img:hover {
@@ -97,7 +99,7 @@ b, strong {
 }
 
 p {
-  color: #90959c;
+  color: var(--Medium);
 }
 
 img {
@@ -112,8 +114,8 @@ header {
 }
 
 h1 {
-  color: #ffeea6;
-  background: linear-gradient(#ffeea6, #ffd479);
+  color: var(--LightYellow);
+  background: linear-gradient(var(--LightYellow), var(--Light));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -126,7 +128,7 @@ cite {
 
 .subtitle {
   margin-bottom: 1.5rem;
-  font-size: .7937em;
+  font-size: var(--Size5);
   font-style: italic;
 }
 
@@ -146,7 +148,7 @@ cite {
   display: list-item;
   list-style-type: disc;
   content: "";
-  font-size: 2em;
+  font-size: var(--Size1);
   list-style-position: outside;
   margin: 0;
   padding: 0;
@@ -158,10 +160,10 @@ h2,h3,h4,h5,h6 {
 }
 
 pre, blockquote, table, iframe, figure {
-  border: 1px #2e2e2e solid;
+  border: 1px var(--Darkest) solid;
   border-radius: 8px;
   padding: 16px;
-  background: black;
+  background: var(--Darkest);
   box-shadow: 10px 10px 26px rgba(0,0,0,0.1);
   margin: 0;
   margin-top: 42px;
@@ -185,11 +187,11 @@ tr:first-child {
 }
 
 tr {
-  border-top: 1px solid gray;
+  border-top: 1px solid var(--Medium);
 }
 
 thead {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--Medium);
 }
 
 table td,
@@ -230,80 +232,25 @@ h1 a.header-anchor {
 }
 
 h2 a.header-anchor {
-  color: #6ab0f3;
+  color: var(--Blue);
 }
 
 h3 a.header-anchor {
-  color: #92d192;
+  color: var(--Green)
 }
 
 h4 a.header-anchor {
-  color: #f2777a;
+  color: var(--Red)
 }
 
 h5 a.header-anchor {
-  color: #fca369;
+  color: var(--Orange)
 }
 
 h6 a.header-anchor {
-  color:#ffd479;
+  color:var(--Light);
 }
 
-.y {
-  color: #ffd479;
-}
-
-.y2 {
-  background-color: #ffd479;
-}
-
-.b {
-  color: #6ab0f3;
-}
-
-.b2 {
-  background-color: #6ab0f3;
-}
-
-.g {
-  color: #92d192;
-}
-
-.g2 {
-  background-color: #92d192;
-}
-
-.r {
-  color: #f2777a;
-}
-
-.r2 {
-  color: #f2777a;
-}
-
-.p {
-  color: #e1a6f2;
-}
-
-.p2 {
-  background-color: #e1a6f2;
-}
-
-.o {
-  color: #fca369;
-}
-
-.o2 {
-  background-color: #fca369;
-}
-
-.a {
-  color: #62cfcf;
-}
-
-.a2 {
-  background-color: #62cfcf;
-}
 
 
 ::-moz-selection {
@@ -318,7 +265,7 @@ p > code {
     padding: 0px 6px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 3px;
-    color: #fca369;
+    color: var(--Orange);
     font-weight: bold;
     font-family: 'Fira Code', monospace;
 }
@@ -350,9 +297,9 @@ p > code {
 
 nav.table-of-contents {
   display: block;
-  background: #666;
-  color: #ffffff;
-  font-size: .7937em;
+  background: var(--Medium);
+  color: var(--Lightest);
+  font-size: var(--Size5);
   line-height: 1em;
   position: absolute;
   top: 0;
@@ -369,9 +316,9 @@ nav.table-of-contents li {
 
 .articles time, figcaption {
   float: right;
-  font-size: .7937em;
+  font-size: var(--Size5);
   font-style: italic;
-  color: #666;
+  color: var(--Medium);
 }
 
 .articles h2:nth-child(n+3) {

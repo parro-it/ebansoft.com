@@ -1,3 +1,5 @@
+@import "new-moon.css";
+
 .hljs-code,
 .hljs-bullet,
 .hljs-link,
@@ -24,42 +26,42 @@
 /* new moon */
 .hljs-built_in,
 .hljs-variable {
-    color: #f2777a;
+    color:  var(--Red);
 }
 
 .hljs-params {
-    color:#777c85;
+    color: var(--Medium);
 }
 
 .language-typescript {
-    color: #f2777a;
+    color:  var(--Red);
 }
 
 .hljs-comment {
-    color:#777c85;
+    color: var(--Medium);
 }
 .hljs-keyword {
-    color:#ffeea6;
+    color: var(--LightYellow);
 }
 
 .hljs-attribute {
-    color:#ffd479;
+    color: var(--Yellow);
 }
 
 .hljs-attr,
 .hljs-selector-attr {
-    color:#ffd479;
+    color:var(--Yellow);
 }
 
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-pseudo,
 .hljs-selector-tag {
-    color:#6ab0f3;
+    color:var(--Blue);
 }
 
 .hljs-number {
-    color:#fca369;
+    color:var(--Orange);
 }
 
 .hljs-built_in,
@@ -67,15 +69,15 @@
 .hljs-template-variable,
 .hljs-type,
 .hljs-builtin-name {
-    color: #4a7baa;
+    color: var(--Aqua);
 }
 
 .hljs-string {
-    color: #92d192;
+    color: var(--Green);
 }
 
 .hljs-selector-class {
-    color:#fca369;
+    color: var(--Orange);
 }
 
 .hljs{
@@ -83,7 +85,7 @@
     display:block;
     overflow-x:auto;
     padding:.5em;
-    background:#2d2d2d;
-    color:#b3b9c5
+    background: var(--Darkest);
+    color:var(--Light)
 
 }

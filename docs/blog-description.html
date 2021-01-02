@@ -1,32 +1,28 @@
-
-
-
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <title>Eban Blog</title>
-  <meta name="description" content="Thoughts on Javascript and C development.">
+    <title>Eban Blog</title>
+    <meta name="description" content="Thoughts on Javascript and C development.">
 
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
-  <link rel="dns-prefetch" href="https://api.github.com/">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="dns-prefetch" href="https://api.github.com/">
 
-  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,400&family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/newmoon.css">
-  <link rel="stylesheet" href="./css/markdowit-copy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;0,700;1,400&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/highlightjs-newmoon.css">
+    <link rel="stylesheet" href="./css/markdowit-copy.css">
 
-  <script src="https://livejs.com/live.js"></script>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-</head>
+    <script src="https://livejs.com/live.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
 
-
-<body>
-  
+  <body>
+    
 <div class="container post">  
   <header>
     <h1>Eban Blog</h1>
@@ -165,11 +161,11 @@ This is a quote. This page has been written in markdown.</p>
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>** argv)</span> </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
-</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1609532764414-87734">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of C code */
+</code><div class="m-mdic-copy-wrapper"><div class="u-mdic-copy-notify" id="j-notify-1609598716365-43121">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of C code */
 int main(int argc, char** argv) {
     return 0;
 }
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609532764414-87734" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609598716365-43121" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
     const e = {
         copy: (t = '', e = '') =>
             new Promise((c, o) => {
@@ -210,12 +206,12 @@ int main(int argc, char** argv) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;ciao&quot;</span>);
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">javascript</span><div class="u-mdic-copy-notify" id="j-notify-1609532764425-87688">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of Javascript code */
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">javascript</span><div class="u-mdic-copy-notify" id="j-notify-1609598716374-92923">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of Javascript code */
 function main(argc, argv) {
     console.log(&quot;ciao&quot;);
     return 0;
 }
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609532764425-87688" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609598716374-92923" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
     const e = {
         copy: (t = '', e = '') =>
             new Promise((c, o) => {
@@ -256,22 +252,22 @@ function main(argc, argv) {
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">range</span>(<span class="hljs-params">start: <span class="hljs-built_in">number</span>, end: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">AsyncIterable</span>&lt;<span class="hljs-title">number</span>&gt; </span>{
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = start; i &lt; end; i++) {
-        <span class="hljs-keyword">yield</span> i;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">range</span>(<span class="hljs-params">end: <span class="hljs-built_in">number</span></span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; end; i++) {
+        <span class="hljs-built_in">console</span>.log(i);
     }
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">typescript</span><div class="u-mdic-copy-notify" id="j-notify-1609532764432-797">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of Typescript code */
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">typescript</span><div class="u-mdic-copy-notify" id="j-notify-1609598716380-93403">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of Typescript code */
 function main(args: Array&lt;string&gt;): number {
     return 0;
 }
 
-export async function* range(start: number, end: number): AsyncIterable&lt;number&gt; {
-    for (let i = start; i &lt; end; i++) {
-        yield i;
+export function range(end: number) {
+    for (let i = 0; i &lt; end; i++) {
+        console.log(i);
     }
 }
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609532764432-797" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609598716380-93403" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
     const e = {
         copy: (t = '', e = '') =>
             new Promise((c, o) => {
@@ -307,15 +303,15 @@ export async function* range(start: number, end: number): AsyncIterable&lt;numbe
 })(this);
 ">copy</button></div></pre>
 <h3 id="html"><a class="header-anchor" href="#html"></a> HTML</h3>
-<pre><code class="language-html"><span class="hljs-comment">&lt;!-- an example of HTML code --&gt;</span>
+<pre><code class="language-html">&lt;!‑‑ an example of HTML code ‑‑&gt;
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;visible&quot;</span>&gt;</span>Hello world<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">html</span><div class="u-mdic-copy-notify" id="j-notify-1609532764437-81075">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="&lt;!-- an example of HTML code --&gt;
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">html</span><div class="u-mdic-copy-notify" id="j-notify-1609598716386-34971">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="&lt;!‑‑ an example of HTML code ‑‑&gt;
 &lt;html&gt;
     &lt;body class=&quot;visible&quot;&gt;Hello world&lt;/body&gt;
 &lt;/html&gt;
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609532764437-81075" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609598716386-34971" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
     const e = {
         copy: (t = '', e = '') =>
             new Promise((c, o) => {
@@ -355,11 +351,11 @@ export async function* range(start: number, end: number): AsyncIterable&lt;numbe
 <span class="hljs-selector-tag">body</span><span class="hljs-selector-class">.visible</span> {
     <span class="hljs-attribute">display</span>: block;
 }
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">css</span><div class="u-mdic-copy-notify" id="j-notify-1609532764440-55083">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of CSS code */
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">css</span><div class="u-mdic-copy-notify" id="j-notify-1609598716388-52507">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="/* an example of CSS code */
 body.visible {
     display: block;
 }
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609532764440-55083" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1609598716388-52507" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!(function (t) {
     const e = {
         copy: (t = '', e = '') =>
             new Promise((c, o) => {
@@ -400,8 +396,6 @@ body.visible {
 </div>
 
 
-  
-   
-</body>
+  </body>
 
 </html>

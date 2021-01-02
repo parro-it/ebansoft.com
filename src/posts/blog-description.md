@@ -151,9 +151,9 @@ function main(args: Array<string>): number {
     return 0;
 }
 
-export async function* range(start: number, end: number): AsyncIterable<number> {
-    for (let i = start; i < end; i++) {
-        yield i;
+export function range(end: number) {
+    for (let i = 0; i < end; i++) {
+        console.log(i);
     }
 }
 ```
@@ -161,7 +161,7 @@ export async function* range(start: number, end: number): AsyncIterable<number> 
 ### HTML
 
 ```html
-<!-- an example of HTML code -->
+<!‑‑ an example of HTML code ‑‑>
 <html>
     <body class="visible">Hello world</body>
 </html>

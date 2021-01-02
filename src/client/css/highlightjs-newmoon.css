@@ -1,0 +1,91 @@
+@import "new-moon.css";
+
+.hljs-code,
+.hljs-bullet,
+.hljs-link,
+.hljs-literal,
+.hljs-quote,
+.hljs-regexp,
+.hljs-emphasis,
+.hljs-strong,
+.hljs-section,
+.hljs-deletion,
+.hljs-meta,
+.hljs-addition,
+.hljs-subst,
+.hljs-symbol {
+    color:rgb(255,0,0);
+}
+
+
+.hljs-emphasis{
+    font-style:italic
+}
+
+
+/* new moon */
+.hljs-built_in,
+.hljs-variable {
+    color:  var(--Red);
+}
+
+.hljs-params {
+    color: var(--Medium);
+}
+
+.language-typescript {
+    color:  var(--Red);
+}
+
+.hljs-comment {
+    color: var(--Medium);
+}
+.hljs-keyword {
+    color: var(--LightYellow);
+}
+
+.hljs-attribute {
+    color: var(--Yellow);
+}
+
+.hljs-attr,
+.hljs-selector-attr {
+    color:var(--Yellow);
+}
+
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+    color:var(--Blue);
+}
+
+.hljs-number {
+    color:var(--Orange);
+}
+
+.hljs-built_in,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-builtin-name {
+    color: var(--Aqua);
+}
+
+.hljs-string {
+    color: var(--Green);
+}
+
+.hljs-selector-class {
+    color: var(--Orange);
+}
+
+.hljs{
+
+    display:block;
+    overflow-x:auto;
+    padding:.5em;
+    background: var(--Darkest);
+    color:var(--Light)
+
+}

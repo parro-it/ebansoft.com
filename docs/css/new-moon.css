@@ -1,0 +1,15 @@
+:root {
+    --Darkest      : #2d2d2d; /* usage: Background        */
+    --Medium       : #777c85; /* usage: Comment           */
+    --Light        : #b3b9c5; /* usage: Foreground        */
+    --Lightest     : #ffffff; /* usage: Function          */
+    --Red          : #f2777a; /* usage: Variable          */
+    --Orange       : #fca369; /* usage: Number            */
+    --Yellow       : #ffd479; /* usage: Attribute         */
+    --LightYellow  : #ffeea6; /* usage: Keyword           */
+    --Green        : #92d192; /* usage: String            */
+    --Blue         : #6ab0f3; /* usage: Class/Tag         */
+    --Aqua         : #76d4d6; /* usage: Constant/Pseudo   */
+    --Purple       : #e1a6f2; /* usage: Support           */
+    --Beige        : #ac8d58; /* usage: Operator          */
+}
