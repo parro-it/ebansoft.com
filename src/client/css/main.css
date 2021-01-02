@@ -1,6 +1,10 @@
 @import "new-moon.css";
 @import "typography.css";
 
+body,html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: var(--Darkest);
@@ -301,7 +305,7 @@ nav.table-of-contents {
   color: var(--Lightest);
   font-size: var(--Size5);
   line-height: 1em;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: calc(50% + 450px);
   margin-left: 20px;

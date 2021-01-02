@@ -126,7 +126,7 @@ A simple badge [![spoiler](https://github.com/parro-it/libdesktop/workflows/Node
 
 ### C
 
-```C
+```c
 /* an example of C code */
 int main(int argc, char** argv) {
     return 0;
