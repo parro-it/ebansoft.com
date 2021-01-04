@@ -24,15 +24,10 @@ of font-sizes.
 
 The size levels used in various context are: 
 
-1) used for headers `h1` and `h2` (they greatly differs by having a different `font-family`). The [header of this chapter](#Typography) is an example of
-an `h2` header, which uses the "Averia Serif Libre" font.
-The title of the page is an `h1` header, using a "Cinzel Decorative" font.
-
+1) used for headers `h1` and `h2` (they greatly differs by having a different `font-family`). The [header of this chapter](#Typography) is an example of an `h2` header, which uses the "Averia Serif Libre" font. The title of the page is an `h1` header, using a "Cinzel Decorative" font.
 2) used for headers `h3`
 3) used for headers `h4`, `h5`, `h6`. 
-4) used for normal body text (such has this one). This size
-correspond to 1em, is set by default to 21px, and varies according 
-to page media size.
+4) used for normal body text (such has this one). This size correspond to 1em, is set by default to 21px, and varies according to page media size.
 5) used as small text, such as for `table` ot `figure` captions.
 
 Herebelow are example of headers of levels 3,4,5,6.

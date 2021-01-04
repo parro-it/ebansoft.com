@@ -1,3 +1,4 @@
+@import "reset.css";
 @import "new-moon.css";
 @import "typography.css";
 
@@ -6,7 +7,6 @@ body,html {
 }
 
 body {
-  margin: 0;
   background-color: var(--Darkest);
   color: var(--Light);
 }
@@ -26,38 +26,31 @@ pre code {
   font-size: var(--Size5); 
 }
 
-h1,h2,h3,h4,h5,h6,p,ol,ul,figure,pre {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
 h1 {
   font-size: var(--Size1);
   font-weight: bold;
-  margin: 0.5em 0;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 
 h2 {
   font-size: var(--Size1);
   font-weight: bold;
-  margin-top: 0.55em;
-  margin-bottom: 0.25em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
   font-size: var(--Size2);
   font-weight: bold;
-  margin-top: 0.55em;
+  margin-top: 0.5em;
   margin-bottom: 0.25em;
 }
 
 h6,h5,h4 {
   font-size: var(--Size3);
-  margin-top: 1.42em;
+  margin-top: 1.5em;
   margin-bottom: 0.25em;
 }
 
@@ -75,23 +68,41 @@ h6 {
 }
 
 p, li {
-  line-height: 1.5em;
+  line-height: 1.5rem;
   letter-spacing: .0046rem;
   text-align: justify;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
+
 ul,ol {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+ul li.task-list-item {
+  list-style-type: none;
 }
 
 a {
-  color: var(--LightYellow);
+  color: var(--Yellow);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: var(--Light);
+  text-decoration: none;
+  color: var(--Orange);
 }
 
 a img:hover {
@@ -99,7 +110,7 @@ a img:hover {
 }
 
 b, strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 p {
@@ -119,7 +130,7 @@ header {
 
 h1 {
   color: var(--LightYellow);
-  background: linear-gradient(var(--LightYellow), var(--Light));
+  background: linear-gradient(var(--LightYellow), var(--Yellow));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -142,26 +153,17 @@ cite {
   padding: 0 1rem;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .header-anchor {
   display: list-item;
   list-style-type: disc;
   content: "";
-  font-size: var(--Size1);
+  font-size: 2em;
   list-style-position: outside;
-  margin: 0;
-  padding: 0;
   line-height: 0.5em;
+  float: left;
 }
 
-h2,h3,h4,h5,h6 {
-  display: flex;
-}
 
 pre, blockquote, table, iframe, figure {
   border: 1px var(--Darkest) solid;
@@ -169,7 +171,6 @@ pre, blockquote, table, iframe, figure {
   padding: 16px;
   background: var(--Darkest);
   box-shadow: 10px 10px 26px rgba(0,0,0,0.1);
-  margin: 0;
   margin-top: 42px;
   margin-bottom: 42px;
   overflow: auto;
@@ -211,20 +212,14 @@ blockquote {
   font-style: italic;
 }
 
-blockquote > p {
-  margin: 0px;
-}
 
 
 blockquote::before,
 blockquote::after {
   content: "𝀒";
-  padding: 0;
-  margin: 0;
 }
 
 blockquote::after {
-  
   text-align: right;
   width: 100%;
   display: block;
@@ -276,23 +271,21 @@ p > code {
 
 .post header h1 {
   float: left;
-  margin: 0;
   display: block;
   height: 30px;
   line-height: 30px;
-  font-size: 1em;
+  font-size: var(--Size3);
 }
 
 .post header {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: block;
   height: 30px;
 }
 
 .post header .subtitle {
   float: right;
-  margin: 0;
   display: block;
   height: 30px;
   line-height: 30px;
@@ -304,7 +297,7 @@ nav.table-of-contents {
   background: var(--Medium);
   color: var(--Lightest);
   font-size: var(--Size5);
-  line-height: 1em;
+  line-height: 1rem;
   position: fixed;
   top: 0;
   left: calc(50% + 450px);
@@ -315,7 +308,7 @@ nav.table-of-contents {
 }
 
 nav.table-of-contents li {
-  line-height: 1.3em;
+  line-height: 1.3rem;
 }
 
 .articles time, figcaption {

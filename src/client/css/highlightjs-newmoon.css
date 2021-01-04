@@ -84,7 +84,7 @@
 
     display:block;
     overflow-x:auto;
-    padding:.5em;
+    padding:.5rem;
     background: var(--Darkest);
     color:var(--Light)
 

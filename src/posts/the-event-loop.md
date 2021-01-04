@@ -3,18 +3,7 @@
 {{ subtitle("The difficulty road to an effective integrastion of two event loop") }}
 {{ categories(["libdesktop", "posts"]) }}
 {{ tags(["node", "typescript", "packages"]) }}
-
-
-# Integrating the UI event loop with the Node js one.
-
-[libui-napi event loop doc page](https://github.com/parro-it/libui-napi/blob/master/docs/initialization.md)
-
-
-{{ subtitle("How how choose the color palette of this web site.") }}
-{{ published("2021-03-07") }}
-{{ categories(["libdesktop", "posts"]) }}
-{{ tags(["node", "typescript", "packages"]) }}
-{{ heading("Color palette in 'Oil Painting Village' Dafen, Shenzhen.","https://source.unsplash.com/AP-29z0BTmA/800x250") }}
+{{ heading("Olympic Rings at Centennial Olympic Park in Atlanta, Georgia","https://source.unsplash.com/mF9m6BRHCtg/800x250") }}
 
 # {{ meta.title }}
 
@@ -22,5 +11,7 @@
 
 {{ meta.subtitle }}
 
+[libui-napi event loop doc page](https://github.com/parro-it/libui-napi/blob/master/docs/initialization.md)
 
-<span>Photo by <a href="https://unsplash.com/@hendrikwill?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Hendrik Will</a> on <a href="https://unsplash.com/s/photos/paint-color-palette?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+<span>Photo by <a href="https://unsplash.com/@bt_optics?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bryan Turner</a> on <a href="https://unsplash.com/s/photos/two-interleaved-rings?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
