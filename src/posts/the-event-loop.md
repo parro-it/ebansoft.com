@@ -4,6 +4,7 @@
 {{ categories(["libdesktop", "posts"]) }}
 {{ tags(["node", "typescript", "packages"]) }}
 {{ heading("Olympic Rings at Centennial Olympic Park in Atlanta, Georgia","https://source.unsplash.com/mF9m6BRHCtg/800x250") }}
+{{ published("2021-09-07") }}
 
 # {{ meta.title }}
 

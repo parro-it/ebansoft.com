@@ -24,8 +24,8 @@
         "title": "Example post of an `orgame` managed blog.",
         "subtitle": "This page is just an example of the capacity of orgame app.",
         "heading": "",
-        "published": "2021-01-02T18:51:29.336Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:49.635Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "orgame",
@@ -45,8 +45,8 @@
         "title": "Future blog posts",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:58.657Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:49.852Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "blog"
@@ -62,7 +62,7 @@
         "headingCaption": "Burano, Venice, Italy",
         "headingFigure": "https://source.unsplash.com/DYb-pCHnubE/800x250",
         "title": "Introduction to libDesktop.",
-        "subtitle": "why I'll soon archive libui-node and what library I'll suggest as replacement.",
+        "subtitle": "why I'll soon archive `libui-node` and what I suggest as replacement.",
         "heading": "",
         "published": "2021-01-07",
         "publishedFormatted": "January 7, 2021",
@@ -129,8 +129,8 @@
         "title": "Integrating the UI event loop with the Node js one.",
         "subtitle": "The difficulty road to an effective integrastion of two event loop",
         "heading": "",
-        "published": "2021-01-02T16:24:59.064Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-09-07",
+        "publishedFormatted": "September 7, 2021",
         "draft": true,
         "tags": [
             "node",
@@ -151,7 +151,7 @@
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-04T07:28:56.045Z",
+        "published": "2021-01-04T19:59:25.820Z",
         "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
@@ -170,7 +170,7 @@
         "title": "EbanSoft blog | drafts",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-04T07:28:56.011Z",
+        "published": "2021-01-04T19:59:25.786Z",
         "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
@@ -189,8 +189,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:59.054Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:50.214Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -208,8 +208,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:58.710Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:49.888Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -250,8 +250,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:58.708Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:49.887Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -269,8 +269,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:58.700Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:49.880Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -288,8 +288,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:59.061Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:50.219Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
@@ -373,8 +373,8 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-02T16:24:59.057Z",
-        "publishedFormatted": "January 2, 2021",
+        "published": "2021-01-04T19:58:50.216Z",
+        "publishedFormatted": "January 4, 2021",
         "draft": true,
         "tags": [
             "untagged"
