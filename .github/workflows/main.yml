@@ -34,4 +34,6 @@ jobs:
           cd orgame
           npm i
           export PATH=$PWD/node_modules/.bin:$PWD/bin:$PATH
-          orgame
+          cd ..
+          orgame src/client src/posts src/pages docs
+          git status
