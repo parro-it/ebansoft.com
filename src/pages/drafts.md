@@ -1,5 +1,3 @@
-
-
 {{ useLayout("../layouts/home.njk") }}
 {{ title("EbanSoft blog | drafts") }}
 {{ subtitle("Thoughts on Javascript and C development.") }}
