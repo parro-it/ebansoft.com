@@ -366,5 +366,27 @@
         "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/manage-ui-events-in-libdesktop.md",
         "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/manage-ui-events-in-libdesktop.html",
         "url": "manage-ui-events-in-libdesktop.html"
+    },
+    "src/posts/choose-the-best-relative-path.md": {
+        "headingCaption": "Some antelopes crossing a road.",
+        "headingFigure": "https://source.unsplash.com/HuXBhUEgZV8/800x250",
+        "title": "How to choose the best path to represent a file.",
+        "subtitle": "This post explains how I wrote a golang package to calculate the shortest relative path that can represent an absolute file path.",
+        "heading": "",
+        "published": "2021-01-07",
+        "publishedFormatted": "January 7, 2021",
+        "draft": false,
+        "tags": [
+            "node",
+            "golang",
+            "packages"
+        ],
+        "categories": [
+            "micro-functions",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/choose-the-best-relative-path.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/choose-the-best-relative-path.html",
+        "url": "choose-the-best-relative-path.html"
     }
 }
