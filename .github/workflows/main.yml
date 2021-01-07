@@ -38,7 +38,7 @@ jobs:
           export PATH=$PWD/node_modules/.bin:$PWD/bin:$PATH
           cd ..
           orgame src/client src/posts src/pages docs
-          git status
+          git diff
       # Runs 
       - name: Commit changes
         uses: EndBug/add-and-commit@v6
