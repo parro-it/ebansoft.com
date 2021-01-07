@@ -1,3 +1,162 @@
 {
-    
+    "src/pages/drafts.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "EbanSoft blog | drafts",
+        "subtitle": "Thoughts on Javascript and C development.",
+        "heading": "",
+        "published": "2021-01-07T16:54:27.004Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/pages/drafts.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/drafts.html",
+        "url": "drafts.html"
+    },
+    "src/pages/index.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "EbanSoft blog | home",
+        "subtitle": "Thoughts on Javascript and C development.",
+        "heading": "",
+        "published": "2021-01-07T16:54:27.026Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/pages/index.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/index.html",
+        "url": "index.html"
+    },
+    "src/posts/memory-management.md": {
+        "headingCaption": "Plastic model of human brain.",
+        "headingFigure": "https://source.unsplash.com/igwG8aIaypo/800x250",
+        "title": "Memory management and widgets lifetime.",
+        "subtitle": "How libDesktop manage memory allocation.",
+        "heading": "",
+        "published": "2021-06-07",
+        "publishedFormatted": "June 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/memory-management.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/memory-management.html",
+        "url": "memory-management.html"
+    },
+    "src/posts/micro-functions.md": {
+        "headingCaption": "A picture decribing micro functions",
+        "headingFigure": "https://source.unsplash.com/gYqkbotfFKc/800x250",
+        "title": "Implementation of async micro-helpers functions.",
+        "subtitle": "I wrote [awesome-micro-npm-packages](https://github.com/parro-it/awesome-micro-npm-packages),\na public list where I collect micro-packages built by me or by others\nthat I use often.\n",
+        "heading": "",
+        "published": "2021-07-07",
+        "publishedFormatted": "July 7, 2021",
+        "draft": true,
+        "tags": [
+            "javascript",
+            "typescript",
+            "awesome-list"
+        ],
+        "categories": [
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/micro-functions.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/micro-functions.html",
+        "url": "micro-functions.html"
+    },
+    "src/posts/napi-helpers.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:54:27.218Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/napi-helpers.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/napi-helpers.html",
+        "url": "napi-helpers.html"
+    },
+    "src/posts/orgame-static-website-builder.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:54:27.219Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/orgame-static-website-builder.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/orgame-static-website-builder.html",
+        "url": "orgame-static-website-builder.html"
+    },
+    "src/posts/properties-and-string-management.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:54:27.221Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/properties-and-string-management.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/properties-and-string-management.html",
+        "url": "properties-and-string-management.html"
+    },
+    "src/posts/the-event-loop.md": {
+        "headingCaption": "Olympic Rings at Centennial Olympic Park in Atlanta, Georgia",
+        "headingFigure": "https://source.unsplash.com/mF9m6BRHCtg/800x250",
+        "title": "Integrating the UI event loop with the Node js one.",
+        "subtitle": "The difficulty road to an effective integrastion of two event loop",
+        "heading": "",
+        "published": "2021-09-07",
+        "publishedFormatted": "September 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/the-event-loop.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/the-event-loop.html",
+        "url": "the-event-loop.html"
+    }
 }
