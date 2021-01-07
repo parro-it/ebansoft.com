@@ -5,7 +5,7 @@
         "title": "EbanSoft blog | drafts",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-07T16:55:05.238Z",
+        "published": "2021-01-07T16:55:44.142Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -24,7 +24,7 @@
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-07T16:55:05.378Z",
+        "published": "2021-01-07T16:55:44.159Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -86,7 +86,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:55:06.195Z",
+        "published": "2021-01-07T16:55:44.365Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -165,7 +165,7 @@
         "title": "Example post of an `orgame` managed blog.",
         "subtitle": "This page is just an example of the capacity of orgame app.",
         "heading": "",
-        "published": "2021-01-07T16:55:05.288Z",
+        "published": "2021-01-07T16:55:44.028Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -186,7 +186,7 @@
         "title": "Future blog posts",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:55:05.438Z",
+        "published": "2021-01-07T16:55:44.205Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -221,5 +221,150 @@
         "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/custom-widgets-development-in-libdesktop.md",
         "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/custom-widgets-development-in-libdesktop.html",
         "url": "custom-widgets-development-in-libdesktop.html"
+    },
+    "src/posts/ebansoft-blog-colors.md": {
+        "headingCaption": "Color palette in 'Oil Painting Village' Dafen, Shenzhen.",
+        "headingFigure": "https://source.unsplash.com/AP-29z0BTmA/800x250",
+        "title": "Ebansoft.com color theme",
+        "subtitle": "How how choose the color palette of this web site.",
+        "heading": "",
+        "published": "2021-08-07",
+        "publishedFormatted": "August 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/ebansoft-blog-colors.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/ebansoft-blog-colors.html",
+        "url": "ebansoft-blog-colors.html"
+    },
+    "src/posts/ebansoft-blog-responsive-page.md": {
+        "headingCaption": "A page with a really complex drawing of layouts.",
+        "headingFigure": "https://source.unsplash.com/0w1MiTY78h0/800x250",
+        "title": "How I built Ebansoft.com responsive layout.",
+        "subtitle": "How I how built Ebansoft.com responsive layout using CSS.",
+        "heading": "",
+        "published": "2021-04-07",
+        "publishedFormatted": "April 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/ebansoft-blog-responsive-page.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/ebansoft-blog-responsive-page.html",
+        "url": "ebansoft-blog-responsive-page.html"
+    },
+    "src/posts/ebansoft-blog-typography.md": {
+        "headingCaption": "This Typewriter is Expensive",
+        "headingFigure": "https://source.unsplash.com/63eWgXwdGJo/800x250",
+        "title": "How I choose Ebansoft.com font families and sizes.",
+        "subtitle": "How I choose Ebansoft.com font families and sizes.",
+        "heading": "",
+        "published": "2021-05-07",
+        "publishedFormatted": "May 7, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/ebansoft-blog-typography.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/ebansoft-blog-typography.html",
+        "url": "ebansoft-blog-typography.html"
+    },
+    "src/posts/how-to-create-a-custom-event.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:55:44.231Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/how-to-create-a-custom-event.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/how-to-create-a-custom-event.html",
+        "url": "how-to-create-a-custom-event.html"
+    },
+    "src/posts/libdesktop-introduction.md": {
+        "headingCaption": "Burano, Venice, Italy",
+        "headingFigure": "https://source.unsplash.com/DYb-pCHnubE/800x250",
+        "title": "Introduction to libDesktop.",
+        "subtitle": "why I'll soon archive `libui-node` and what I suggest as replacement.",
+        "heading": "",
+        "published": "2021-01-07",
+        "publishedFormatted": "January 7, 2021",
+        "draft": false,
+        "tags": [
+            "node",
+            "typescript",
+            "packages"
+        ],
+        "categories": [
+            "libdesktop",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/libdesktop-introduction.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/libdesktop-introduction.html",
+        "url": "libdesktop-introduction.html"
+    },
+    "src/posts/libdesktop-widgets.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:55:44.239Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/libdesktop-widgets.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/libdesktop-widgets.html",
+        "url": "libdesktop-widgets.html"
+    },
+    "src/posts/manage-ui-events-in-libdesktop.md": {
+        "headingCaption": "",
+        "headingFigure": "",
+        "title": "",
+        "subtitle": "",
+        "heading": "",
+        "published": "2021-01-07T16:55:44.240Z",
+        "publishedFormatted": "January 7, 2021",
+        "draft": true,
+        "tags": [
+            "untagged"
+        ],
+        "categories": [
+            "uncategorised"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/manage-ui-events-in-libdesktop.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/manage-ui-events-in-libdesktop.html",
+        "url": "manage-ui-events-in-libdesktop.html"
     }
 }
