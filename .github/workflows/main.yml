@@ -32,5 +32,6 @@ jobs:
         run: |
           git clone https://github.com/parro-it/orgame
           cd orgame
+          npm i
           npm i -g
           orgame
