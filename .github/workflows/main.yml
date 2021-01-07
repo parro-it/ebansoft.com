@@ -33,5 +33,5 @@ jobs:
           git clone https://github.com/parro-it/orgame
           cd orgame
           npm i
-          PATH=$PWD/node_modules/.bin:$PATH
+          export PATH=$PWD/node_modules/.bin:$PWD/bin:$PATH
           orgame
