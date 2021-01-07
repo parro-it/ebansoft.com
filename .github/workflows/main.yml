@@ -37,3 +37,13 @@ jobs:
           cd ..
           orgame src/client src/posts src/pages docs
           git status
+      # Runs 
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v6
+        with:
+          author_name: Andrea Parodi
+          author_email: andrea@parro.it
+          message: 'Changes to documentation compiled in GH action.'
+          add: '*.*'
+          push: true
+          token: ${{ secrets.GH_DOCS }}
