@@ -5,7 +5,7 @@
         "title": "EbanSoft blog | drafts",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-07T17:21:49.811Z",
+        "published": "2021-01-07T17:45:34.329Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -14,8 +14,8 @@
         "categories": [
             "uncategorised"
         ],
-        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/pages/drafts.md",
-        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/drafts.html",
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/pages/drafts.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/drafts.html",
         "url": "drafts.html"
     },
     "src/pages/index.md": {
@@ -24,7 +24,7 @@
         "title": "EbanSoft blog | home",
         "subtitle": "Thoughts on Javascript and C development.",
         "heading": "",
-        "published": "2021-01-07T17:22:34.859Z",
+        "published": "2021-01-07T17:45:34.475Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -33,8 +33,8 @@
         "categories": [
             "uncategorised"
         ],
-        "srcPath": "/home/parroit/Desktop/parro-it/ebansoft.com/src/pages/index.md",
-        "outPath": "/home/parroit/Desktop/parro-it/ebansoft.com/docs/index.html",
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/pages/index.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/index.html",
         "url": "index.html"
     },
     "src/posts/memory-management.md": {
@@ -86,7 +86,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:57:03.466Z",
+        "published": "2021-01-07T17:45:35.085Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -105,7 +105,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:57:03.468Z",
+        "published": "2021-01-07T17:45:35.087Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -124,7 +124,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:57:03.470Z",
+        "published": "2021-01-07T17:45:35.088Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -165,7 +165,7 @@
         "title": "Example post of an `orgame` managed blog.",
         "subtitle": "This page is just an example of the capacity of orgame app.",
         "heading": "",
-        "published": "2021-01-07T16:57:03.052Z",
+        "published": "2021-01-07T17:45:34.383Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -186,7 +186,7 @@
         "title": "Future blog posts",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:57:03.275Z",
+        "published": "2021-01-07T17:45:34.548Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -294,7 +294,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:57:03.303Z",
+        "published": "2021-01-07T17:45:34.582Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -335,7 +335,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:56:20.429Z",
+        "published": "2021-01-07T17:45:34.590Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
@@ -354,7 +354,7 @@
         "title": "",
         "subtitle": "",
         "heading": "",
-        "published": "2021-01-07T16:56:20.430Z",
+        "published": "2021-01-07T17:45:34.591Z",
         "publishedFormatted": "January 7, 2021",
         "draft": true,
         "tags": [
