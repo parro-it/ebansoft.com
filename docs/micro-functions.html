@@ -53,17 +53,19 @@ but still...</p>
 <p>It was when I discovered Node.js and NPM that I finally find
 I have the right tools to build a really useful collection
 of packages.</p>
-<figure>cb01d731e535b13206d627e560a4fd1d<figcaption>A tweet about micro functions </figcaption></figure>
+<figure><blockquote class="twitter-tweet"><p lang="en" dir="ltr">In principle, I like NPM&#39;s idea of micro-frameworks containing a single class or function, and that should work well with Swift, where …</p>&mdash; Nick Lockwood (@nicklockwood) <a href="https://twitter.com/nicklockwood/status/925738874873184256?ref_src=twsrc%5Etfw">November 1, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<figcaption>A tweet about micro functions </figcaption></figure>
 <h2 id="the-current-situation-%F0%9F%8F%AD"><a class="header-anchor" href="#the-current-situation-%F0%9F%8F%AD"></a> The current situation 🏭</h2>
 <p>But in 2020, I want to be able to use es6 modules
 and typescript type descriptions:</p>
 <pre><code class="language-js"><span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;map&quot;</span>;
 
 <span class="hljs-built_in">console</span>.log(map(<span class="hljs-string">&quot;ciao&quot;</span>, toUpper))
-</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">js</span><div class="u-mdic-copy-notify" id="j-notify-1610041534605-12417">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="import {map} from &quot;map&quot;;
+</code><div class="m-mdic-copy-wrapper"><span class="u-mdic-copy-code_lang">js</span><div class="u-mdic-copy-notify" id="j-notify-1610041576664-15964">copy success</div><button class="u-mdic-copy-btn j-mdic-copy-btn" data-mdic-content="import {map} from &quot;map&quot;;
 
 console.log(map(&quot;ciao&quot;, toUpper))
-" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1610041534605-12417" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
+" data-mdic-attach-content="" data-mdic-notify-id="j-notify-1610041576664-15964" data-mdic-notify-delay="2000" data-mdic-copy-fail-text="copy fail" onclick="!function(t){const e={copy:(t='',e='')=>new Promise((c,o)=>{const n=document.createElement('textarea'),d=e?`\n\n${e}`:e;n.value=`${t}${d}`,document.body.appendChild(n),n.select();try{const t=document.execCommand('copy');document.body.removeChild(n),t?c():o()}catch(t){document.body.removeChild(n),o()}}),btnClick(t){const c=t&&t.dataset?t.dataset:{},o=c.mdicNotifyId,n=document.getElementById(o),d=c.mdicNotifyDelay,i=c.mdicCopyFailText;e.copy(c.mdicContent,c.mdicAttachContent).then(()=>{n.style.display='block',setTimeout(()=>{n.style.display='none'},d)}).catch(()=>{alert(i)})}};e.btnClick(t)}(this);">copy</button></div></pre>
 <p>So I wrote the first module of the collection, and here we are</p>
 <table>
 <thead>
