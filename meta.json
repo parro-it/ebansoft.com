@@ -388,5 +388,27 @@
         "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/choose-the-best-relative-path.md",
         "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/choose-the-best-relative-path.html",
         "url": "choose-the-best-relative-path.html"
+    },
+    "src/posts/interesting-articles-of-the-week-02.md": {
+        "headingCaption": "Some antelopes crossing a road.",
+        "headingFigure": "https://source.unsplash.com/HuXBhUEgZV8/800x250",
+        "title": "Interesting articles of the week 02/2021.",
+        "subtitle": "Interesting Go, Js or C articles I read this week.",
+        "heading": "",
+        "published": "2021-01-17",
+        "publishedFormatted": "January 17, 2021",
+        "draft": true,
+        "tags": [
+            "node",
+            "golang",
+            "packages"
+        ],
+        "categories": [
+            "articles",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/interesting-articles-of-the-week-02.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/interesting-articles-of-the-week-02.html",
+        "url": "interesting-articles-of-the-week-02.html"
     }
 }
