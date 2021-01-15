@@ -80,6 +80,10 @@ li {
   letter-spacing: .0046rem;
   text-align: justify;
   margin-bottom: 0.5rem;
+  hyphens: manual;
+  -webkit-hyphenate-character: "‒";
+  -moz-hyphenate-character: "‒";
+  hyphenate-character: "‒";
 }
 
 ul,ol {
