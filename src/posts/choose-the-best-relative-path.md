@@ -1,7 +1,7 @@
 {{ useLayout("./.layout") }}
 {{ title("How to choose the best path to represent a file.") }}
 {{ subtitle("This post explains how I wrote a golang package to calculate the shortest relative path that can represent an absolute file path.") }}
-{{ draft(false) }}
+{{ draft(true) }}
 {{ published("2021-01-07") }}
 {{ categories(["micro-functions", "posts"]) }}
 {{ tags(["node", "golang", "packages"]) }}

@@ -1,7 +1,7 @@
 {{ useLayout("./.layout") }}
 {{ title("Introduction to libDesktop.") }}
 {{ subtitle("why I'll soon archive `libui-node` and what I suggest as replacement.") }}
-{{ draft(false) }}
+{{ draft(true) }}
 {{ published("2021-01-07") }}
 {{ categories(["libdesktop", "posts"]) }}
 {{ tags(["node", "typescript", "packages"]) }}
