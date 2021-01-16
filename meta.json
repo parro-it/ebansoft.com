@@ -315,7 +315,7 @@
         "heading": "",
         "published": "2021-01-07",
         "publishedFormatted": "January 7, 2021",
-        "draft": false,
+        "draft": true,
         "tags": [
             "node",
             "typescript",
@@ -375,7 +375,7 @@
         "heading": "",
         "published": "2021-01-07",
         "publishedFormatted": "January 7, 2021",
-        "draft": false,
+        "draft": true,
         "tags": [
             "node",
             "golang",
