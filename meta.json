@@ -410,5 +410,27 @@
         "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/interesting-articles-of-the-week-02.md",
         "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/interesting-articles-of-the-week-02.html",
         "url": "interesting-articles-of-the-week-02.html"
+    },
+    "src/posts/gash-how-to-build-a-shell-tokenizer-in-go.md": {
+        "headingCaption": "person holding shell facing sea",
+        "headingFigure": "https://source.unsplash.com/-iXjUZlCsd0/800x250",
+        "title": "How to build a shell tokenizer in GO.",
+        "subtitle": "This post is the first of a series where I explains how to implements in Go a tokenizer for `gash`, a shell language I'm building.",
+        "heading": "",
+        "published": "2021-01-16",
+        "publishedFormatted": "January 16, 2021",
+        "draft": false,
+        "tags": [
+            "gash",
+            "golang",
+            "packages"
+        ],
+        "categories": [
+            "gash",
+            "posts"
+        ],
+        "srcPath": "/home/runner/work/ebansoft.com/ebansoft.com/src/posts/gash-how-to-build-a-shell-tokenizer-in-go.md",
+        "outPath": "/home/runner/work/ebansoft.com/ebansoft.com/docs/gash-how-to-build-a-shell-tokenizer-in-go.html",
+        "url": "gash-how-to-build-a-shell-tokenizer-in-go.html"
     }
 }
