@@ -38,11 +38,562 @@
     <h1 id="how-to-build-a-shell-tokenizer-in-go."><a class="header-anchor" href="#how-to-build-a-shell-tokenizer-in-go."></a> How to build a shell tokenizer in GO.</h1>
 <figure><img src="https://source.unsplash.com/-iXjUZlCsd0/800x250" alt=""><figcaption>person holding shell facing sea</figcaption></figure>
 <p>This post is the first of a series where I explains how to implements in Go a tokenizer for <code>gash</code>, a shell language I'm building.</p>
+<p><code>gash</code> is a console shell with a very focused scope:
+I will use it to run commands provided by <code>virtual-server</code>,
+a Go library that allows to in­teract with local and
+remote SSH server in very high level way.</p>
+<p><code>virtual-server</code> is closed source, but <a href="https://github.com/parro-it/gash">gash</a>
+is MIT licensed, so you can go give it a star at the end of the tutorial if you like it.</p>
+<h2 id="the-posts-series"><a class="header-anchor" href="#the-posts-series"></a> The posts series</h2>
+<ul>
+<li>Introduction to <code>gash</code> and tokenization of strings (this one).</li>
+<li>Tokenization of operators and command terminators.</li>
+<li>Tokenization of numbers and comments.</li>
+<li>String interpolation.</li>
+<li>Implementing a tokenization cli.</li>
+<li>Discerning commands at tokenization time to parse them concurrently.</li>
+<li>Final consideration on <code>gash</code> tokenizer.</li>
+</ul>
+<p>This series of posts only explains how to build the tokenizer for
+the lan­gua­ge. If there is some interests in the series,
+I will eventually wrote another one that explains how to build the
+parser for the language and the runtime.</p>
+<p>I will complete <code>gash</code> anyway, because it will greatly simplify
+my life at my daytime work.</p>
+<h2 id="the-language"><a class="header-anchor" href="#the-language"></a> The language</h2>
+<p>Since this is the first post of the series, I will give a brief, informal
+intro­duc­tion to the <code>gash</code> language.</p>
+<h3 id="introduction"><a class="header-anchor" href="#introduction"></a> Introduction</h3>
+<p>The language that will be used by the shell will be a very
+simplified version of the posix standard shell language.</p>
+<p>To make it simple, it will only implement the <code>Simple Command</code>
+gram­mar rule from the standard, in a very loose way.</p>
+<h3 id="some-snippets-of-gash"><a class="header-anchor" href="#some-snippets-of-gash"></a> Some snippets of <code>gash</code></h3>
+<p>Here below are some brief examples of what you can expect the language to be,
+just to give you a taste of what we will tokenizing in these posts...</p>
+<h4 id="commands"><a class="header-anchor" href="#commands"></a> Commands</h4>
+<p>Commands are separated by a <code>;</code></p>
+<p>Command names and arguments are separated by spaces, tabs or newlines.</p>
+<pre><code class="language-bash">cmd1; cmd2; cmd3 arg1 arg2 arg3;
+cmd3 arg1 
+	arg2 arg3;
+</code></pre>
+<h4 id="operators"><a class="header-anchor" href="#operators"></a> Operators</h4>
+<p>There are various kind of operators.
+Operators always break other tokens
+(note the <code>&gt;</code> below) as if they are
+a whitespace.</p>
+<pre><code class="language-bash">exists remote:/usr/<span class="hljs-built_in">local</span> &amp;&amp; 
+	ls remote:/usr/<span class="hljs-built_in">local</span>&gt;<span class="hljs-built_in">local</span>:result
+cp <span class="hljs-built_in">local</span>:/tmp/afile remote:/usr/<span class="hljs-built_in">local</span>/afile&amp;
+</code></pre>
+<h4 id="verbatim-strings-and-interpolation"><a class="header-anchor" href="#verbatim-strings-and-interpolation"></a> Verbatim strings and interpolation</h4>
+<p>TODO: write chapter with example of Verbatim strings and interpolation</p>
+<h4 id="comments"><a class="header-anchor" href="#comments"></a> Comments</h4>
+<p>TODO: write chapter with example of comments</p>
+<h4 id="data-types"><a class="header-anchor" href="#data-types"></a> Data types</h4>
+<p>There are two types of data: <code>integers</code>
+and <code>strings</code>.</p>
+<pre><code class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;some words&quot;</span> 22 &gt; somefile.txt;
+	
+any sequence of charachters is a string
+even <span class="hljs-keyword">if</span> not quoted <span class="hljs-keyword">in</span> any way
+
+all this text will be parsed as a long <span class="hljs-built_in">command</span>
+named any with a multitude of arguments
+
+digits within words are parts of the word and 
+not tokenized as integers 
+this is a single w1o2r34d word;
+
+this is a digit 42;
+</code></pre>
+<p>TODO: Complete chapter &quot;This posts series&quot; and move</p>
+<h2 id="tokenization-of-strings"><a class="header-anchor" href="#tokenization-of-strings"></a> Tokenization of strings</h2>
+<p>TODO: rename chapter &quot;Tokenization of strings&quot; as &quot;project scaffolding&quot;
+Create a new directory where you prefer,
+and initialize a new Go module:</p>
+<pre><code class="language-bash">$ mkdir gash &amp;&amp; <span class="hljs-built_in">cd</span> gash
+$ go mod init github.com/&lt;your user name&gt;/gash
+</code></pre>
+<p>Otherwise, you can get the complete source code
+of the <code>gash</code> tokenizer as it should be at the end
+of this post:</p>
+<pre><code class="language-bash">$ mkdir gash &amp;&amp; <span class="hljs-built_in">cd</span> gash
+$ git <span class="hljs-built_in">clone</span> https://github.com/parro-it/gash/strings-tokenization
+</code></pre>
+<h2 id="source-files-skeleton"><a class="header-anchor" href="#source-files-skeleton"></a> Source files skeleton</h2>
+<p>TODO: merge chapter &quot;Source files skeleton&quot; with &quot;project scaffolding&quot;</p>
+<p>We will use a <code>tokenizer</code> sub-module for the
+tokenizer. We will write the source code
+in a <code>tokenizer/tokenizer.go</code> file, and unit tests in
+file <code>tokenizer/tokenizer_test.go</code>.</p>
+<p>Create a skeleton of the two files with an
+always failing test, and check it effectively fail:</p>
+<p><strong>tokenizer/tokenizer.go</strong></p>
+<pre><code class="language-go"><span class="hljs-keyword">package</span> tokenizer
+
+</code></pre>
+<p><em>tokenizer/tokenizer_test.go</em></p>
+<pre><code class="language-go"><span class="hljs-keyword">package</span> tokenizer
+
+<span class="hljs-keyword">import</span> (
+	<span class="hljs-string">&quot;strings&quot;</span>
+	<span class="hljs-string">&quot;testing&quot;</span>
+
+	<span class="hljs-string">&quot;github.com/stretchr/testify/assert&quot;</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestTokenizer</span><span class="hljs-params">(t *testing.T)</span></span> {
+	t.Run(<span class="hljs-string">&quot;always fail&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+		assert.Fail(t, <span class="hljs-string">&quot;it always fail&quot;</span>)
+	})
+}		
+</code></pre>
+<h2 id="tokenizer-struct"><a class="header-anchor" href="#tokenizer-struct"></a> Tokenizer struct</h2>
+<p>The tokenizer struct will be the main data
+structure the user of our API will use.</p>
+<p>It will contains a single public field
+<code>Tokens</code> of <code>chan Token</code> type that will emit every token found in source code.</p>
+<p>It will also have a private err <code>error</code> field,
+that we will use to keep any er­rors that
+eventually make the tokenization operation
+fail.</p>
+<pre><code class="language-go"><span class="hljs-comment">// Tokenizer can be used to find all</span>
+<span class="hljs-comment">// tokens in an `io.Reader` source.</span>
+<span class="hljs-keyword">type</span> Tokenizer <span class="hljs-keyword">struct</span> {
+	<span class="hljs-comment">// Tokens emits all tokens found in `source`</span>
+	Tokens <span class="hljs-keyword">chan</span> Token
+	<span class="hljs-comment">// contains the error that eventually caused</span>
+	<span class="hljs-comment">// the tokenize operation to fails.</span>
+	err error
+}
+</code></pre>
+<p>The module also has a public <code>New</code> function,
+that initialize and return a new Tokenizer
+instance:</p>
+<pre><code class="language-go"><span class="hljs-comment">// New creates a new tokenizer that</span>
+<span class="hljs-comment">// read tokens from `source` arguement</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">New</span><span class="hljs-params">(source io.Reader)</span> *<span class="hljs-title">Tokenizer</span></span> {
+	tkn := Tokenizer{
+		Tokens: <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> Token),
+	}
+	<span class="hljs-keyword">return</span> &amp;tkn
+}
+</code></pre>
+<p>So, go on and add these two snippet of codes
+to <code>tokenizer.go</code>.</p>
+<p>You can also test the New function
+adding the snippet of code above in file <code>tokenizer_test.go</code>.</p>
+<p>Remember to remove the initial fake test if you
+want to see the test suc­ceed:</p>
+<pre><code class="language-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestNew</span><span class="hljs-params">(t *testing.T)</span></span> {
+	source := strings.NewReader(<span class="hljs-string">`some code`</span>)
+	tokenizer := New(source)
+
+	t.Run(<span class="hljs-string">&quot;return a pointer to a new Tokenizer&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+		assert.NotNil(t, tokenizer)
+	})
+
+	t.Run(<span class="hljs-string">&quot;creates a new channel&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+		assert.NotNil(t, tokenizer.Tokens)
+	})
+
+	<span class="hljs-comment">// there&#x27;s no way that the tokenizer </span>
+	<span class="hljs-comment">// could be in an error state by now, </span>
+	<span class="hljs-comment">// but we check it just in case...</span>
+
+	t.Run(<span class="hljs-string">&quot;has no error&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+		assert.NoError(t, tokenizer.err)
+	})
+}
+</code></pre>
+<p>You can verify that the code is running using :</p>
+<pre><code class="language-bash">$ go <span class="hljs-built_in">test</span> ./...
+OUTPUT &gt;&gt; ok	  github.com/parro-it/gash/tokenizer   0.002s
+</code></pre>
+<p>Well, I hope you get the test passing, the
+<code>Tokenizer</code> is not doing any­thing by now. In order to
+actually do the parsing, we will need a function in a
+separated goroutine that somehow read code from the input reader,
+and write tokens into the channel.</p>
+<p>Let's write an initial version of the function that
+read from <code>source</code> one rune at the time, and print
+them on stdout:</p>
+<pre><code class="language-go">
+<span class="hljs-comment">// find all tokens in `source` and write them in</span>
+<span class="hljs-comment">// `tkn` channel. This function is called in a goroutine</span>
+<span class="hljs-comment">// by `New` function.</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tkn *Tokenizer)</span> <span class="hljs-title">tokenize</span><span class="hljs-params">(source io.Reader)</span></span> {
+	<span class="hljs-comment">// we need to close the tokens channel</span>
+	<span class="hljs-comment">// when we finish with source</span>
+	<span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(tkn.Tokens)
+	<span class="hljs-comment">// we use a `bufio` reader to speed</span>
+	<span class="hljs-comment">// things up when we will read source code from </span>
+	<span class="hljs-comment">// files or network.</span>
+	reader := bufio.NewReader(source)
+	
+	<span class="hljs-keyword">for</span> {
+		r, _, err := reader.ReadRune()
+		<span class="hljs-keyword">if</span> err == io.EOF {
+			<span class="hljs-comment">// when err is EOF, exit with</span>
+			<span class="hljs-comment">// no errors</span>
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+			<span class="hljs-comment">// when err is not EOF, we store </span>
+			<span class="hljs-comment">// it in the tokenizer</span>
+			tkn.err = err
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-comment">// if no errors, print the</span>
+		<span class="hljs-comment">// rune</span>
+		fmt.Println(r)
+	}
+}
+
+</code></pre>
+<p>This new tokenize function should be run in its goroutine
+adding this line in <code>New</code> function before <code>return</code>:</p>
+<pre><code class="language-go"><span class="hljs-keyword">go</span> tkn.tokenize(source)
+</code></pre>
+<p>You should now be able to check this piece of code by
+running the exixstig test again and looking at the printed runes.</p>
+<p>Moreover, now that we are properly closing the
+<code>Tokens</code> channel, we can check that an empty string
+does not caus the emission of any Token. Add this code to the test file:</p>
+<pre><code class="language-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">TestTokens</span><span class="hljs-params">(t *testing.T)</span></span> {
+	t.Run(<span class="hljs-string">&quot;read empty reader source&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+		source := strings.NewReader(<span class="hljs-string">``</span>)
+		tokenizer := New(source)
+		<span class="hljs-keyword">for</span> <span class="hljs-keyword">range</span> tokenizer.Tokens {
+			assert.Fail(t, <span class="hljs-string">&quot;no tokens should be emit&quot;</span>)
+		}
+	})
+})
+</code></pre>
+<p><em>if we would had tested this before, the test itself would have halted, because the channel would have been hanging open, without nobody caring</em>...</p>
+<h2 id="the-token-struct"><a class="header-anchor" href="#the-token-struct"></a> The <code>Token</code> struct</h2>
+<p>But we don't want to print runes to console,
+we want to write <code>Token</code> instances to the <code>Tokens</code>
+channel.</p>
+<p><code>Token</code> is a simple struct with a string <code>Content</code>
+field that contains the text of the token, and a <code>Type</code>
+field which is an enum identifying the type of token.</p>
+<p>Since in this post, we'll only produce string tokens,
+the enum will only have a <code>String</code> value, plus an <code>Empty</code>
+values that will be used for empty tokens.</p>
+<p>Add this code to <code>tokenizer/tokenizer.go</code>:</p>
+<pre><code class="language-go">
+<span class="hljs-comment">// Token represents a single token</span>
+<span class="hljs-keyword">type</span> Token <span class="hljs-keyword">struct</span> {
+	<span class="hljs-comment">// Type is the type of the token</span>
+	Type TokenType
+	<span class="hljs-comment">// Content is the text representation of the token</span>
+	Content <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-comment">// TokenType is an enum of all kinds of tokens.</span>
+<span class="hljs-keyword">type</span> TokenType <span class="hljs-keyword">int</span>
+
+<span class="hljs-keyword">const</span> (
+	<span class="hljs-comment">// Empty is the kind of an empty token (the default)</span>
+	Empty TokenType = <span class="hljs-literal">iota</span>
+	<span class="hljs-comment">// String is the kind of a token that represents</span>
+	<span class="hljs-comment">// a sequence of arbitrary runes.</span>
+	String
+)
+
+</code></pre>
+<p>Having defined the <code>Token</code> struct, we can
+improve the <code>tokenize</code> fun­ction in order to
+emit our first token.</p>
+<p>We will use a <code>bytes.Buffer</code> to acc­um­ulate all
+runes until we get an <code>EOF</code> error, and only then we
+will emit a new <code>Token</code> with content of the buffer.</p>
+<pre><code class="language-go">
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tkn *Tokenizer)</span> <span class="hljs-title">tokenize</span><span class="hljs-params">(source io.Reader)</span></span> {
+	<span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(tkn.Tokens)
+	reader := bufio.NewReader(source)
+	buf := bytes.Buffer{}
+
+	<span class="hljs-keyword">for</span> {
+		r, _, err := reader.ReadRune()
+		<span class="hljs-keyword">if</span> err == io.EOF {
+			tkn.Tokens &lt;- Token{
+				Content: buf.String(),
+				Type:	String,
+			}
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+			tkn.err = err
+			<span class="hljs-keyword">return</span>
+		}
+		buf.WriteRune(r)
+		
+	}
+}
+
+</code></pre>
+<p>To test this change, add this new test
+inside <code>TestTokens</code>:</p>
+<pre><code class="language-go">
+t.Run(<span class="hljs-string">&quot;read a single string token&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+	source := strings.NewReader(<span class="hljs-string">`echo`</span>)
+	tokenizer := New(source)
+	assert.NotNil(t, tokenizer)
+	w, ok := &lt;-tokenizer.Tokens
+	assert.True(t, ok)
+	assert.Equal(t, <span class="hljs-string">&quot;echo&quot;</span>, w.String())
+	<span class="hljs-comment">// there should be no more tokens</span>
+	empty, ok := &lt;-tokenizer.Tokens
+	assert.False(t, ok)
+	assert.Equal(t, Empty, empty.Type)
+	assert.Equal(t, <span class="hljs-string">&quot;&quot;</span>, empty.String())
+})
+		
+</code></pre>
+<h2 id="tokenizing-multiple-tokens"><a class="header-anchor" href="#tokenizing-multiple-tokens"></a> Tokenizing multiple tokens</h2>
+<p>We actually want to tokenize multiple strings,
+while by now the tokenize func only emit one
+token containing all the source code. Not
+really useful!</p>
+<p>If you remember something of the <code>gash</code>
+language unformal definition I gave you before,
+strings will be separated by operators or whitespaces.
+In this post we will cover only whitespaces, we'll handles
+operators in a future post.</p>
+<p>Essentially, any time we found a whitespace rune,
+if our <code>buf</code> con­ta­ins some­thing we emit a token
+with the content, empty the buf, and continue with
+the next rune. If the rune is not a space, we
+accumulate it as before.</p>
+<p>At the end we emit the Token as before, but only if
+it contains something.</p>
+<pre><code class="language-go">
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tkn *Tokenizer)</span> <span class="hljs-title">tokenize</span><span class="hljs-params">(source io.Reader)</span></span> {
+	<span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(tkn.Tokens)
+	reader := bufio.NewReader(source)
+	buf := bytes.Buffer{}
+
+	<span class="hljs-keyword">for</span> {
+		r, _, err := reader.ReadRune()
+		<span class="hljs-keyword">if</span> err == io.EOF {
+			<span class="hljs-keyword">if</span> buf.Len() &gt; <span class="hljs-number">0</span> {
+				tkn.Tokens &lt;- Token{
+					Content: buf.String(),
+					Type:	String,
+				}
+			}
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+			tkn.err = err
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">switch</span> <span class="hljs-literal">true</span> {
+		<span class="hljs-keyword">case</span> r == <span class="hljs-string">&#x27; &#x27;</span> || r == <span class="hljs-string">&#x27;\t&#x27;</span>:
+			<span class="hljs-keyword">if</span> buf.Len() &gt; <span class="hljs-number">0</span> {
+				tkn.Tokens &lt;- Token{
+					Content: buf.String(),
+					Type:	String,
+				}
+			}
+			<span class="hljs-keyword">continue</span>
+		<span class="hljs-keyword">default</span>:
+			buf.WriteRune(r)
+		}
+		
+	}
+}
+
+</code></pre>
+<p>Let's refactor an <code>emitString</code> method that
+abstract the repeated code bl­ock used to
+emit the token:</p>
+<pre><code class="language-go">
+<span class="hljs-comment">// emit a token of String type and reset the buffer</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tkn *Tokenizer)</span> <span class="hljs-title">emitString</span><span class="hljs-params">(buf *bytes.Buffer)</span></span> {
+	<span class="hljs-keyword">if</span> buf.Len() == <span class="hljs-number">0</span> {
+		<span class="hljs-comment">// we don&#x27;t want to emi empty tokens!</span>
+		<span class="hljs-keyword">return</span>
+	}
+
+	tkn.Tokens &lt;- Token{
+		Content: buf.String(),
+		Type:	String,
+	}
+
+	<span class="hljs-comment">// reset the buffer to reuse it</span>
+	buf.Reset()
+}
+
+</code></pre>
+<p>The tokenize function is now decisively leaner:</p>
+<pre><code class="language-go">
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tkn *Tokenizer)</span> <span class="hljs-title">tokenize</span><span class="hljs-params">(source io.Reader)</span></span> {
+	<span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(tkn.Tokens)
+	reader := bufio.NewReader(source)
+	buf := bytes.Buffer{}
+
+	<span class="hljs-keyword">for</span> {
+		r, _, err := reader.ReadRune()
+		<span class="hljs-keyword">if</span> err == io.EOF {
+			tkn.emitString(&amp;buf)
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+			tkn.err = err
+			<span class="hljs-keyword">return</span>
+		}
+		<span class="hljs-keyword">switch</span> <span class="hljs-literal">true</span> {
+		<span class="hljs-keyword">case</span> r == <span class="hljs-string">&#x27; &#x27;</span> || r == <span class="hljs-string">&#x27;\t&#x27;</span>:
+			tkn.emitString(&amp;buf)
+			<span class="hljs-keyword">continue</span>
+		<span class="hljs-keyword">default</span>:
+			buf.WriteRune(r)
+		}
+	}
+
+}
+
+</code></pre>
+<p>We can now test with some more realistic source code in order to get mul­tiple tokens.</p>
+<p>Add this code to the test file, inside <code>TestTokens</code>:</p>
+<pre><code class="language-go">
+t.Run(<span class="hljs-string">&quot;read multiple tokens&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+	source := strings.NewReader(<span class="hljs-string">`echo multiple strings`</span>)
+	tokenizer := New(source)
+	assert.NotNil(t, tokenizer)
+	expected := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> Token, <span class="hljs-number">3</span>)
+	expected &lt;- Token{
+		Content: <span class="hljs-string">&quot;echo&quot;</span>,
+		Type:	String,
+	}
+	expected &lt;- Token{
+		Content: <span class="hljs-string">&quot;multiple&quot;</span>,
+		Type:	String,
+	}
+	expected &lt;- Token{
+		Content: <span class="hljs-string">&quot;strings&quot;</span>,
+		Type:	String,
+	}
+
+	<span class="hljs-keyword">for</span> tk := <span class="hljs-keyword">range</span> tokenizer.Tokens {
+		tkExpected := &lt;-expected
+		assert.Equal(t, tkExpected.Type, tk.Type)
+		assert.Equal(t, tkExpected.Content, tk.Content)
+	}
+
+	_, ok := &lt;-tokenizer.Tokens
+	assert.False(t, ok)
+
+})
+
+</code></pre>
+<p>Whoo! Multiple tokens produced, good work! Keep going 💪</p>
+<p>Since I feel strong and I think we'll have to test a lot of tokens in the future, let's go clever and extract a simple
+type that will simplify the test of future tokens:</p>
+<pre><code class="language-go">
+
+<span class="hljs-comment">// ExpectedTokens simplify testing of</span>
+<span class="hljs-comment">// Tokenizer by storing a set of tokens,</span>
+<span class="hljs-comment">// that can be later easily compared with the</span>
+<span class="hljs-comment">// tokens emitted by an actual channel using</span>
+<span class="hljs-comment">// AssertEquals</span>
+<span class="hljs-keyword">type</span> ExpectedTokens []Token
+
+<span class="hljs-comment">// AssertEquals compare the tokens emitted by</span>
+<span class="hljs-comment">// `actual` with the expected ones previously stored</span>
+<span class="hljs-comment">// in the slice. If the two sets differ the test is failed</span>
+<span class="hljs-comment">// accordingly.</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(tokens ExpectedTokens)</span> <span class="hljs-title">AssertEquals</span><span class="hljs-params">(
+	t *testing.T, 
+	actual <span class="hljs-keyword">chan</span> Token,
+)</span></span> {
+	tkCount := <span class="hljs-number">0</span>
+
+	failDiffLen := <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+		assert.Failf(
+			t, <span class="hljs-string">&quot;&quot;</span>, 
+			<span class="hljs-string">&quot;%d tokens expected, but %d found&quot;</span>, 
+			<span class="hljs-built_in">len</span>(tokens), tkCount
+		)
+	}
+
+	<span class="hljs-keyword">for</span> _, expectedToken := <span class="hljs-keyword">range</span> tokens {
+		<span class="hljs-keyword">select</span> {
+		<span class="hljs-keyword">case</span> &lt;-time.After(<span class="hljs-number">500</span> * time.Millisecond):
+			failDiffLen()
+		<span class="hljs-keyword">case</span> actualToken := &lt;-actual:
+			assert.Equal(
+				t, 
+				actualToken.Type, 
+				expectedToken.Type
+			)
+			assert.Equal(
+				t, 
+				actualToken.Content, 
+				expectedToken.Content
+			)
+			tkCount++
+		}
+
+	}
+
+	<span class="hljs-comment">// there should be no other tokens left at this point</span>
+	_, ok := &lt;-actual
+	<span class="hljs-keyword">if</span> ok {
+		failDiffLen()
+	}
+}
+
+</code></pre>
+<p>The <code>ExpectedTokens</code> type refine <code>[]Token</code> to add
+an <code>AssertEquals</code> me­thod.</p>
+<p><code>AssertEquals</code> takes in input the channel of tokens
+to test. It compares the tokens emitted by the channel
+with the ones in the slice, both for size and content
+of the tokens.</p>
+<p>The test code is now greatly simplified:</p>
+<pre><code class="language-go">
+expectedStrings := ExpectedTokens{
+	{Content: <span class="hljs-string">&quot;echo&quot;</span>, Type: String},
+	{Content: <span class="hljs-string">&quot;multiple&quot;</span>, Type: String},
+	{Content: <span class="hljs-string">&quot;strings&quot;</span>, Type: String},
+}
+
+t.Run(<span class="hljs-string">&quot;read multiple tokens&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(t *testing.T)</span></span> {
+	source := strings.NewReader(<span class="hljs-string">`echo multiple strings`</span>)
+	tokenizer := New(source)
+	assert.NotNil(t, tokenizer)
+	expectedStrings.AssertEquals(t, tokenizer.Tokens)
+	_, ok := &lt;-tokenizer.Tokens
+	assert.False(t, ok)
+})
+
+</code></pre>
+<p>and you can see how we can now use <code>expectedStrings</code>
+in multiple tests, provided that the expected results
+it's the same.</p>
+<h2 id="final-conclusion"><a class="header-anchor" href="#final-conclusion"></a> Final conclusion</h2>
+<p>If you follow all the steps, you should now have a functioning
+tokenizer that split a string in multiple word tokens.</p>
+<p>That's all for now. I hope you enjoied the turial. I enjoied writing it.</p>
+<p>In the next post of the series, we will improve the tokenizer by adding
+to it the capacity to tokenize operators and command termination characters
+(<code>;</code>)</p>
 <h2 id="credits"><a class="header-anchor" href="#credits"></a> Credits</h2>
 <ul>
 <li><span>Photo by <a href="https://unsplash.com/@valentinsteph?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Stéphan Valentin</a> on <a href="https://unsplash.com/s/photos/shells-beach?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></li>
 </ul>
-<nav class="table-of-contents"><ol><li><a href="#how-to-build-a-shell-tokenizer-in-go."> How to build a shell tokenizer in GO.</a><ol><li><a href="#credits"> Credits</a></li></ol></li></ol></nav>
+<nav class="table-of-contents"><ol><li><a href="#how-to-build-a-shell-tokenizer-in-go."> How to build a shell tokenizer in GO.</a><ol><li><a href="#the-posts-series"> The posts series</a></li><li><a href="#the-language"> The language</a><ol><li><a href="#introduction"> Introduction</a></li><li><a href="#some-snippets-of-gash"> Some snippets of gash</a><ol><li><a href="#commands"> Commands</a></li><li><a href="#operators"> Operators</a></li><li><a href="#verbatim-strings-and-interpolation"> Verbatim strings and interpolation</a></li><li><a href="#comments"> Comments</a></li><li><a href="#data-types"> Data types</a></li></ol></li></ol></li><li><a href="#tokenization-of-strings"> Tokenization of strings</a></li><li><a href="#source-files-skeleton"> Source files skeleton</a></li><li><a href="#tokenizer-struct"> Tokenizer struct</a></li><li><a href="#the-token-struct"> The Token struct</a></li><li><a href="#tokenizing-multiple-tokens"> Tokenizing multiple tokens</a></li><li><a href="#final-conclusion"> Final conclusion</a></li><li><a href="#credits"> Credits</a></li></ol></li></ol></nav><p>TODO: Improve golang code colors
+TODO: CSS - implements adaptive size page</p>
+<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
   </section>
 
 </div>
