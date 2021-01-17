@@ -4,6 +4,7 @@
 
 body,html {
   scroll-behavior: smooth;
+  font-size: var(--Size4);
 }
 
 body {
@@ -14,20 +15,20 @@ body {
 body {
   font-family: 'Averia Serif Libre', serif;
   font-weight: normal;
-  font-size: var(--Size4);
 }
 
-pre code {
+.container pre code {
   font-family: 'Fira Code', monospace;
-  font-size: var(--Size3); 
+  font-size: var(--Size5); 
   line-height: 1.5em;
+  tab-size: 4;
 }
 
-.small {
+.container .small {
   font-size: var(--Size5); 
 }
 
-h1 {
+.container h1 {
   font-size: var(--Size1);
   font-weight: bold;
   margin-top: 1em;
@@ -41,41 +42,41 @@ header h1 {
 }
 
 
-h2 {
+.container h2 {
   font-size: var(--Size1);
   font-weight: bold;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
 
-h3 {
+.container h3 {
   font-size: var(--Size2);
   font-weight: bold;
   margin-top: 1em;
   margin-bottom: 0.25em;
 }
 
-h6,h5,h4 {
+.container h6,h5,h4 {
   font-size: var(--Size3);
   margin-top: 1.8em;
   margin-bottom: 0.25em;
 }
 
-h4 {
+.container h4 {
   font-weight: bold;
 }
 
-h5 {
+.container h5 {
   font-weight: normal;
 }
 
-h6 {
+.container h6 {
   font-weight: normal;
   font-style: italic;
 }
 
-p, 
-li {
+.container p, 
+.container li {
   line-height: 1.6em;
   letter-spacing: .0046rem;
   text-align: justify;
@@ -86,32 +87,32 @@ li {
   hyphenate-character: "‒";
 }
 
-ul,ol {
+.container ul,ol {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-ol li {
+.container ol li {
   list-style-type: decimal;
   list-style-position: inside;
   margin-bottom: 1em;
 }
 
-ul li {
+.container ul li {
   list-style-type: disc;
   list-style-position: inside;
   margin-bottom: 1em;
 }
 
-ul li.task-list-item {
+.container ul li.task-list-item {
   list-style-type: none;
 }
 
-li p {
+.container li p {
   display: inline;
 }
 
-a {
+.container a {
   color: var(--Yellow);
   text-decoration: none;
   transition-property: color;
@@ -119,40 +120,40 @@ a {
   transition-timing-function: ease-in-out;
 }
 
-a:hover {
+.container a:hover {
   text-decoration: none;
   color: var(--Orange);
 }
 
-a img:hover {
+.container a img:hover {
   text-decoration: none;
 }
 
-b, strong {
+.container b, strong {
   font-weight: bold;
 }
 
-p, li {
+.container p, li {
   color: #a0a0a0;
 }
 
-ul li::marker,
-ol li::marker {
+.container ul li::marker,
+.container ol li::marker {
   color: #e0e0e0;
 }
 
-img {
+.container img {
   border-style: none;
   display: inline-block;
   max-width: 100%;
   height: auto;
 }
 
-header {
+.container header {
   text-align: center;
 }
 
-h1 {
+.container h1 {
   color: var(--LightYellow);
   background: linear-gradient(var(--LightYellow), var(--Yellow));
   -webkit-background-clip: text;
@@ -160,7 +161,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-cite {
+.container cite {
   display: block;
   text-align: right;
 }
@@ -178,7 +179,7 @@ cite {
 }
 
 
-.header-anchor {
+.container .header-anchor {
   display: list-item;
   list-style-type: disc;
   content: "";
@@ -189,7 +190,7 @@ cite {
 }
 
 
-pre, blockquote, table, iframe, figure {
+.container pre, blockquote, table, iframe, figure {
   border: 1px var(--Darkest) solid;
   border-radius: 8px;
   padding: 16px;
@@ -200,7 +201,7 @@ pre, blockquote, table, iframe, figure {
   overflow: auto;
 }
 
-table {
+.container table {
   border-collapse: collapse;
   border-radius: 12px;
   font-family: 'Fira Code', monospace;
@@ -209,80 +210,78 @@ table {
   margin: 42px auto;
 }
 
-tr:first-child {
+.container tr:first-child {
   border-top: none;
 }
 
-tr {
+.container tr {
   border-top: 1px solid var(--Medium);
 }
 
-thead {
+.container thead {
   border-bottom: 1px solid var(--Medium);
 }
 
-table td,
-table th {
+.container table td,
+.container table th {
   padding: 6px 10px;
   
 }
 
 
-blockquote {
+.container blockquote {
   padding: 15px;
   text-align: left;
   font-style: italic;
 }
 
-
-
-blockquote::before,
-blockquote::after {
+.container blockquote::before,
+.container blockquote::after {
   content: "𝀒";
 }
 
-blockquote::after {
+.container blockquote::after {
   text-align: right;
   width: 100%;
   display: block;
   padding-right: 15px;
 }
 
-h1 a.header-anchor {
+.container h1 a.header-anchor {
   display: none;
 }
 
-h2 a.header-anchor {
+.container h2 a.header-anchor {
   color: var(--Blue);
 }
 
-h3 a.header-anchor {
+.container h3 a.header-anchor {
   color: var(--Green)
 }
 
-h4 a.header-anchor {
+.container h4 a.header-anchor {
   color: var(--Red)
 }
 
-h5 a.header-anchor {
+.container h5 a.header-anchor {
   color: var(--Orange)
 }
 
-h6 a.header-anchor {
+.container h6 a.header-anchor {
   color:var(--Light);
 }
 
 
 
-::-moz-selection {
+.container ::-moz-selection {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-::selection {
+.container ::selection {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-p > code {
+.container p > code {
     padding: 0px 6px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 3px;
@@ -291,7 +290,7 @@ p > code {
     font-family: 'Fira Code', monospace;
 }
 
-.post header h1 {
+.container .post header h1 {
   float: left;
   display: block;
   height: 30px;
@@ -299,23 +298,21 @@ p > code {
   font-size: var(--Size3);
 }
 
-.post header {
+.container .post header {
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;
   height: 30px;
 }
 
-.post header .subtitle {
+.container .post header .subtitle {
   float: right;
   display: block;
   height: 30px;
   line-height: 30px;
 }
 
-
-
-nav.table-of-contents > ol::before {
+.container nav.table-of-contents > ol::before {
   content: "Index";
   font-size: var(--Size4);
   float: right;
@@ -323,7 +320,7 @@ nav.table-of-contents > ol::before {
   color: var(--Darkest)
 }
 
-nav.table-of-contents {
+.container nav.table-of-contents {
   display: block;
   background: var(--Medium);
   color: var(--Lightest);
@@ -362,7 +359,7 @@ nav.table-of-contents li a{
   margin-top: 200px;
 }
 
-input.task-list-item-checkbox {
+.container input.task-list-item-checkbox {
   width: 1.3em;
   height: 1.3em;
 }
