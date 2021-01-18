@@ -39,11 +39,7 @@
 <figure><img src="https://source.unsplash.com/-iXjUZlCsd0/800x250" alt=""><figcaption>person holding shell facing sea</figcaption></figure>
 <p>This post is the first of a series where I explains how to implements in Go a tokenizer for <code>gash</code>, a shell language I'm building.</p>
 <p><code>gash</code> is a console shell with a very focused scope:
-<<<<<<< HEAD
-I will use it to run commands provided by <code>virtual-server</code>,
-=======
 I will use it to run com­mands provided by <code>virtual-server</code>,
->>>>>>> 05cacd0... space
 a Go library that allows to in­teract with local and
 remote SSH server in very high level way.</p>
 <p><code>virtual-server</code> is closed source, but <a href="https://github.com/parro-it/gash">gash</a>
@@ -60,11 +56,7 @@ is MIT licensed, so you can go give it a star at the end of the tutorial if you 
 </ul>
 <p>This series of posts only explains how to build the tokenizer for
 the lan­gua­ge. If there is some interests in the series,
-<<<<<<< HEAD
-I will eventually wrote another one that explains how to build the
-=======
 I will eventually wrote ano­ther one that explains how to build the
->>>>>>> 05cacd0... space
 parser for the language and the runtime.</p>
 <p>I will complete <code>gash</code> anyway, because it will greatly simplify
 my life at my daytime work.</p>
@@ -76,10 +68,7 @@ intro­duc­tion to the <code>gash</code> language.</p>
 simplified version of the posix standard shell language.</p>
 <p>To make it simple, it will only implement the <code>Simple Command</code>
 gram­mar rule from the standard, in a very loose way.</p>
-<<<<<<< HEAD
-=======
 <p>TODO: add link to posix standard</p>
->>>>>>> 05cacd0... space
 <h3 id="some-snippets-of-gash"><a class="header-anchor" href="#some-snippets-of-gash"></a> Some snippets of <code>gash</code></h3>
 <p>Here below are some brief examples of what you can expect the language to be,
 just to give you a taste of what we will tokenizing in these posts...</p>
@@ -601,12 +590,8 @@ to it the capacity to tokenize operators and command termination characters
 <li><span>Photo by <a href="https://unsplash.com/@valentinsteph?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Stéphan Valentin</a> on <a href="https://unsplash.com/s/photos/shells-beach?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></li>
 </ul>
 <nav class="table-of-contents"><ol><li><a href="#how-to-build-a-shell-tokenizer-in-go."> How to build a shell tokenizer in GO.</a><ol><li><a href="#the-posts-series"> The posts series</a></li><li><a href="#the-language"> The language</a><ol><li><a href="#introduction"> Introduction</a></li><li><a href="#some-snippets-of-gash"> Some snippets of gash</a><ol><li><a href="#commands"> Commands</a></li><li><a href="#operators"> Operators</a></li><li><a href="#verbatim-strings-and-interpolation"> Verbatim strings and interpolation</a></li><li><a href="#comments"> Comments</a></li><li><a href="#data-types"> Data types</a></li></ol></li></ol></li><li><a href="#tokenization-of-strings"> Tokenization of strings</a></li><li><a href="#source-files-skeleton"> Source files skeleton</a></li><li><a href="#tokenizer-struct"> Tokenizer struct</a></li><li><a href="#the-token-struct"> The Token struct</a></li><li><a href="#tokenizing-multiple-tokens"> Tokenizing multiple tokens</a></li><li><a href="#final-conclusion"> Final conclusion</a></li><li><a href="#credits"> Credits</a></li></ol></li></ol></nav><p>TODO: Improve golang code colors
-<<<<<<< HEAD
-TODO: CSS - implements adaptive size page</p>
-=======
 TODO: CSS - implements adaptive size page
 TODO: CSS - check contrasts of the colors</p>
->>>>>>> 05cacd0... space
 <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
