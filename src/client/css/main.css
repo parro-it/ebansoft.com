@@ -52,14 +52,14 @@ header h1 {
 .container h3 {
   font-size: var(--Size2);
   font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: 0.25em;
+  margin-top: 1.5em;
+  margin-bottom: 0.45em;
 }
 
 .container h6,h5,h4 {
   font-size: var(--Size3);
   margin-top: 1.8em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.45em;
 }
 
 .container h4 {
@@ -75,9 +75,13 @@ header h1 {
   font-style: italic;
 }
 
+.container p {
+  line-height: 1.4em;
+}
+
 .container p, 
 .container li {
-  line-height: 1.6em;
+  
   letter-spacing: .0046rem;
   text-align: justify;
   margin-bottom: 0.5rem;

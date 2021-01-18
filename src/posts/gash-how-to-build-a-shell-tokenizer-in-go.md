@@ -15,7 +15,7 @@
 {{ meta.subtitle }}
 
 `gash` is a console shell with a very focused scope:
-I will use it to run commands provided by `virtual-server`,
+I will use it to run com&shy;mands provided by `virtual-server`,
 a Go library that allows to in&shy;teract with local and 
 remote SSH server in very high level way.
 
@@ -35,7 +35,7 @@ is MIT licensed, so you can go give it a star at the end of the tutorial if you 
 
 This series of posts only explains how to build the tokenizer for
 the lan&shy;gua&shy;ge. If there is some interests in the series, 
-I will eventually wrote another one that explains how to build the 
+I will eventually wrote ano&shy;ther one that explains how to build the 
 parser for the language and the runtime.
 
 I will complete `gash` anyway, because it will greatly simplify
@@ -53,6 +53,8 @@ simplified version of the posix standard shell language.
 
 To make it simple, it will only implement the `Simple Command`
 gram&shy;mar rule from the standard, in a very loose way.
+
+TODO: add link to posix standard
 
 ### Some snippets of `gash`
 
@@ -689,6 +691,7 @@ to it the capacity to tokenize operators and command termination characters
 
 TODO: Improve golang code colors
 TODO: CSS - implements adaptive size page
+TODO: CSS - check contrasts of the colors
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
