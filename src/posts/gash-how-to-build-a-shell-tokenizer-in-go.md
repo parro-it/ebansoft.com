@@ -48,13 +48,13 @@ Since this is the first post of the series, I will give a brief, informal
 
 ### Introduction
 
-The language that will be used by the shell will be a very 
-simplified version of the posix standard shell language.
+`gash` language is a  simplified version of the `POSIX` [Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html).
 
-To make it simple, it will only implement the `Simple Command`
-gram&shy;mar rule from the standard, in a very loose way.
+It will only implement the `simple_command` gram&shy;mar rule from the standard grammar.
 
-TODO: add link to posix standard
+> A "simple command" is a sequence of optional variable assignments and redirections, in any sequence, optionally followed by words and redirections, terminated by a control operator.
+
+_definition of [Simple Commands](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_09_01) in the POSIX standard._
 
 ### Some snippets of `gash`
 
@@ -88,11 +88,37 @@ cp local:/tmp/afile remote:/usr/local/afile&
 
 #### Verbatim strings and interpolation
 
-TODO: write chapter with example of Verbatim strings and interpolation
+Strings can contains more then one line,
+and there are various kind of interpolation
+that are alwais introduced by the $ sign.
+
+```bash
+
+echo "strings
+can span multiple 
+lines"
+
+echo "strings
+can contains interpolations:
+1) simple variables: $varname
+2) simple variables with multi-word names: ${variables name}
+3) sub commands $(varname)
+4) arithmetic expression: $[varname]"
+
+echo If you want to type the $character, you 
+	have to escape it with another dollar: $$
+```
 
 #### Comments
 
-TODO: write chapter with example of comments
+The `#` character introduce comments. Anything
+that follow it, until end of the line, is ignored:
+
+```bash
+
+# this is a comment
+
+```
 
 #### Data types 
 
@@ -115,12 +141,11 @@ this is a single w1o2r34d word;
 this is a digit 42;
 ```
 
-TODO: Complete chapter "This posts series" and move
 
-## Tokenization of strings
-TODO: rename chapter "Tokenization of strings" as "project scaffolding"
+## Project scaffolding
+
 Create a new directory where you prefer,
-and initialize a new Go module:
+and initialize a new Go module there:
 
 ```bash
 $ mkdir gash && cd gash
@@ -136,17 +161,13 @@ $ mkdir gash && cd gash
 $ git clone https://github.com/parro-it/gash/strings-tokenization
 ```
 
-## Source files skeleton
-
-TODO: merge chapter "Source files skeleton" with "project scaffolding"
-
 We will use a `tokenizer` sub-module for the
 tokenizer. We will write the source code
-in a `tokenizer/tokenizer.go` file, and unit tests in
-file `tokenizer/tokenizer_test.go`.
+in `tokenizer/tokenizer.go`, and unit tests in
+`tokenizer/tokenizer_test.go`.
 
-Create a skeleton of the two files with an 
-always failing test, and check it effectively fail:
+Create a skeleton of the two files with `package` 
+declaration and an "always failing" test, and check it effectively fails:
 
 __tokenizer/tokenizer.go__
 ```go
@@ -171,6 +192,11 @@ func TestTokenizer(t *testing.T) {
 	})
 }		
 ```
+
+We have created the file tree needed by the
+tokenizer. Now we'll write some real code: 
+the `Tokenizer` struct and the `Token` struct.
+
 
 ## Tokenizer struct
 
